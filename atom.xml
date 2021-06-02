@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.ztianzeng.com</id>
     <title>天增的博客</title>
-    <updated>2021-06-02T07:37:24.893Z</updated>
+    <updated>2021-06-02T07:56:23.090Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.ztianzeng.com"/>
     <link rel="self" href="https://www.ztianzeng.com/atom.xml"/>
@@ -10,6 +10,28 @@
     <logo>https://www.ztianzeng.com/images/avatar.png</logo>
     <icon>https://www.ztianzeng.com/favicon.ico</icon>
     <rights>All rights reserved 2021, 天增的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[2021年XBOX最新解锁的方法]]></title>
+        <id>https://www.ztianzeng.com/post/2021-nian-xbox-zui-xin-jie-suo-de-fang-fa/</id>
+        <link href="https://www.ztianzeng.com/post/2021-nian-xbox-zui-xin-jie-suo-de-fang-fa/">
+        </link>
+        <updated>2021-06-02T07:53:04.000Z</updated>
+        <content type="html"><![CDATA[<p>从刚买来xbox就开始锁区，去年六月份买的，到现在整一年了。</p>
+<p>当了一年的国行勇士，一年之后才有了新的解锁方案。</p>
+<p>打工人实惨。😭😭😭😭</p>
+<h1 id="最新解锁方法">最新解锁方法</h1>
+<ol>
+<li>XBOX 系统更新为最新的系统</li>
+<li>XBOX 更新完系统后在连线模式 （有线或者无线都可以）</li>
+<li>U盘格式为NTFS</li>
+<li>插入U盘后 重新启动主机</li>
+<li>在主机系统中区域显示有外区后 再次重新启动主机</li>
+<li>选择对应的国家或者地区<br>
+U盘中 $ConsoleGen8--------对应 XBOX ONE XBOX ONE S XBOX ONE X<br>
+U盘中 $ConsoleGen9--------对应 XSX XSS</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[K8S从入门到放弃 —— 安装Ingress]]></title>
         <id>https://www.ztianzeng.com/post/k8s-cong-ru-men-dao-fang-qi-an-zhuang-ingress/</id>
