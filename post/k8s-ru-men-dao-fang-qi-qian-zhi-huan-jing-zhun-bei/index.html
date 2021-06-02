@@ -2,24 +2,22 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>关于 | 天增的博客</title>
+<title>K8S入门到放弃 —— 前置环境准备 | 天增的博客</title>
 <link rel="shortcut icon" href="https://www.ztianzeng.com/favicon.ico?v=1622612061869">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://www.ztianzeng.com/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="关于 | 天增的博客 - Atom Feed" href="https://www.ztianzeng.com/atom.xml">
+<link rel="alternate" type="application/atom+xml" title="K8S入门到放弃 —— 前置环境准备 | 天增的博客 - Atom Feed" href="https://www.ztianzeng.com/atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="
-欢迎来到我的小站呀，很高兴遇见你！🤝
-
-🏠 关于本站
-👨‍💻 博主是谁
-⛹ 兴趣爱好
-📬 联系我呀
-..." />
-    <meta name="keywords" content="" />
+    <meta name="description" content="安装 docker / kubelet
+在每台要安装的机器上都执行这段脚本，安装所有k8s运行时需要的软件。
+#!/bin/bash
+# 卸载旧版本
+sudo yum remove docker \
+                  do..." />
+    <meta name="keywords" content="K8S" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
@@ -81,39 +79,86 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              关于
+              K8S入门到放弃 —— 前置环境准备
             </h2>
             <div class="post-info">
               <span>
-                2019-01-25
+                2021-06-02
               </span>
               <span>
-                1 min read
+                2 min read
               </span>
+              
+                <a href="https://www.ztianzeng.com/tag/K8S/" class="post-tag">
+                  # K8S
+                </a>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<h2 id="联系我呀">📬 联系我呀</h2>
+                <h1 id="安装-docker-kubelet">安装 docker / kubelet</h1>
+<p>在每台要安装的机器上都执行这段脚本，安装所有k8s运行时需要的软件。</p>
+<pre><code>#!/bin/bash
+# 卸载旧版本
+sudo yum remove docker \
+                  docker-client \
+                  docker-client-latest \
+                  docker-common \
+                  docker-latest \
+                  docker-latest-logrotate \
+                  docker-logrotate \
+                  docker-engine
+ sudo yum install -y yum-utils
+ sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+# 安装并启动 docker
+sudo yum -y install docker-ce docker-ce-cli containerd.io    
+systemctl enable docker
+systemctl start docker
+systemctl stop firewalld
+systemctl disable firewalld
+
+# 安装 nfs-utils
+# 必须先安装 nfs-utils 才能挂载 nfs 网络存储
+yum install -y nfs-utils
+yum install -y wget
+
+# 关闭 SeLinux
+setenforce 0
+sed -i &quot;s/SELINUX=enforcing/SELINUX=disabled/g&quot; /etc/selinux/config
+
+# 关闭 swap
+swapoff -a
+yes | cp /etc/fstab /etc/fstab_bak
+cat /etc/fstab_bak |grep -v swap &gt; /etc/fstab
+# 修改 /etc/sysctl.conf
+# 如果有配置，则修改
+sed -i &quot;s#^net.ipv4.ip_forward.*#net.ipv4.ip_forward=1#g&quot;  /etc/sysctl.conf
+sed -i &quot;s#^net.bridge.bridge-nf-call-ip6tables.*#net.bridge.bridge-nf-call-ip6tables=1#g&quot;  /etc/sysctl.conf
+sed -i &quot;s#^net.bridge.bridge-nf-call-iptables.*#net.bridge.bridge-nf-call-iptables=1#g&quot;  /etc/sysctl.conf
+# 可能没有，追加
+echo &quot;net.ipv4.ip_forward = 1&quot; &gt;&gt; /etc/sysctl.conf
+echo &quot;net.bridge.bridge-nf-call-ip6tables = 1&quot; &gt;&gt; /etc/sysctl.conf
+echo &quot;net.bridge.bridge-nf-call-iptables = 1&quot; &gt;&gt; /etc/sysctl.conf
+# 执行命令以应用
+sysctl -p
+
+# 卸载旧版本
+sudo yum remove -y kubelet kubeadm kubectl
+sudo yum install -y kubelet kubeadm kubectl
+
+# 重启 docker，并启动 kubelet
+systemctl daemon-reload
+systemctl restart docker
+systemctl enable kubelet &amp;&amp; systemctl start kubelet
+</code></pre>
 
               </div>
               <div class="toc-container">
                 <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E5%85%B3%E4%BA%8E%E6%9C%AC%E7%AB%99">🏠 关于本站</a></li>
-<li><a href="#%E5%8D%9A%E4%B8%BB%E6%98%AF%E8%B0%81">👨‍💻 博主是谁</a></li>
-<li><a href="#%E5%85%B4%E8%B6%A3%E7%88%B1%E5%A5%BD">⛹ 兴趣爱好</a></li>
-<li><a href="#%E8%81%94%E7%B3%BB%E6%88%91%E5%91%80">📬 联系我呀</a></li>
-</ul>
-</li>
+<li><a href="#%E5%AE%89%E8%A3%85-docker-kubelet">安装 docker / kubelet</a></li>
 </ul>
 
               </div>
