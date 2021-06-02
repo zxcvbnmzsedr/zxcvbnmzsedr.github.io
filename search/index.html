@@ -1,11 +1,12 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>友情链接 | 天增的博客</title>
+<title>搜索 | 天增的博客</title>
 
 <link rel="shortcut icon" href="https://www.ztianzeng.com/favicon.ico?v=1622621897836">
 
@@ -34,12 +35,21 @@
 <!--<script src="media/scripts/index.js"></script>-->
 
 
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.0/dist/fuse.basic.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ejs@3.1.3/ejs.min.js"></script>
+    <script src="https://www.ztianzeng.com/media/gridea-search/gridea-search.js"></script>
+    <script src="https://www.ztianzeng.com/media/gridea-search/result-template.ejs" type="text/ejs"></script>
 </head>
 
 <body>
-<div class="main gt-bg-theme-color-first">
-        <div class="main-content">
-            <nav class="navbar navbar-expand-lg">
+    <style>
+        .searched-keyword {
+            background-color: yellow;
+            color: red;
+        }
+    </style>
+    <div class="main gt-bg-theme-color-first">
+        <nav class="navbar navbar-expand-lg">
     <div class="navbar-brand">
         <img class="user-avatar" src="/images/avatar.png" alt="头像">
         <div class="site-name gt-c-content-color-first">
@@ -106,28 +116,17 @@
         }
     }
 </script>
-            <div class="post-container">
-                <div class="post-detail">
-                    <article>
-                        <!-- <div class="post-content-wrapper"> -->
-                            <div class="post-content">
-                                <div class="friends-desc">
-                                    
-                                </div>
-                                <h3 id="linklist">友链列表</h3>
-                                
-                                    
-                                
-                            </div>
-                        <!-- </div> -->
-                    </article>
-                </div>
-                
+        <div id="gridea-search-result" data-update="1622621897836">
+            <div class="searching" style="font-size: 18px; margin-top: 50px;">
+                <i class="fa fa-sync-alt fa-spin"></i>&nbsp;&nbsp;搜索中......
+                <br><br>
+                <span style="font-size: 65%; color: #aaa">第一次搜索可能需要耗费较长时间构建索引，请耐心等待...</span>
             </div>
-
-
-
-            <div class="site-footer gt-c-content-color-first">
+            <div class="no-result" style="display:none; font-size: 20px; margin-top: 50px;">
+                <i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;未搜索到相关文章，请更换关键词
+            </div>
+        </div>
+        <div class="site-footer gt-c-content-color-first">
     <div class="slogan gt-c-content-color-first">躺平</div>
     <div class="social-container">
         
@@ -157,7 +156,6 @@
   hljs.highlightAll()
 </script>
 
-        </div>
     </div>
 </body>
 
