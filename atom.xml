@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.ztianzeng.com</id>
     <title>天增的博客</title>
-    <updated>2021-06-02T09:17:10.654Z</updated>
+    <updated>2021-06-07T12:21:20.955Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.ztianzeng.com"/>
     <link rel="self" href="https://www.ztianzeng.com/atom.xml"/>
@@ -10,6 +10,22 @@
     <logo>https://www.ztianzeng.com/images/avatar.png</logo>
     <icon>https://www.ztianzeng.com/favicon.ico</icon>
     <rights>All rights reserved 2021, 天增的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[稀缺读后感]]></title>
+        <id>https://www.ztianzeng.com/post/xi-que-du-hou-gan/</id>
+        <link href="https://www.ztianzeng.com/post/xi-que-du-hou-gan/">
+        </link>
+        <updated>2021-06-07T09:39:39.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="我们是如何陷入贫穷与忙碌的">我们是如何陷入贫穷与忙碌的</h1>
+<p>作者在这本书里面，总共提到了我认为最重要的三个概念 —— 带宽、余闲、管窥</p>
+<p>一切的稀缺都能够用这三个词语来进行结束。</p>
+<p>余闲不够，导致带宽变窄，进而导致管窥心态，管窥的心态进一步导致余闲不足，形成恶性循环。</p>
+<p>就好比，信奉商家推崇的消费主义，手头钱不够就向你推销信用卡贷款，买了一大堆没有任何作用的东西，还款日一到手头没有钱怎么办？就需要另一张信用卡来进行周转，以贷养贷，最后导致贷款利率远超过自己所能负担的起的水平。。直接崩盘</p>
+<p>而解决这一切的源头，需要扩大自己的余闲，也就是有能力赚钱，或者节约自己的带宽，就能跳出这种恶性循环。</p>
+<p>忙碌与焦虑，是绝大多是人都会遇到的问题，重要的是，如何去平衡这些心态。</p>
+<figure data-type="image" tabindex="1"><img src="https://www.ztianzeng.com/post-images/1623067956535.png" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[2021年XBOX最新解锁的方法]]></title>
         <id>https://www.ztianzeng.com/post/2021-nian-xbox-zui-xin-jie-suo-de-fang-fa/</id>
