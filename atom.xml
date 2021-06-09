@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.ztianzeng.com</id>
     <title>天增的博客</title>
-    <updated>2021-06-07T12:21:20.955Z</updated>
+    <updated>2021-06-09T08:17:17.984Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.ztianzeng.com"/>
     <link rel="self" href="https://www.ztianzeng.com/atom.xml"/>
@@ -10,6 +10,28 @@
     <logo>https://www.ztianzeng.com/images/avatar.png</logo>
     <icon>https://www.ztianzeng.com/favicon.ico</icon>
     <rights>All rights reserved 2021, 天增的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[苹果 macOS 12 Monterey 升级]]></title>
+        <id>https://www.ztianzeng.com/post/ping-guo-macos-12-monterey-sheng-ji/</id>
+        <link href="https://www.ztianzeng.com/post/ping-guo-macos-12-monterey-sheng-ji/">
+        </link>
+        <updated>2021-06-09T06:30:30.000Z</updated>
+        <content type="html"><![CDATA[<p>苹果6.7号大半夜开wwdc，发布了一系列新的系统，被戏称mac on  Harmony。</p>
+<p>第一时间从 https://developer.apple.com/download/ 上下载了描述文件，第一波尝鲜。</p>
+<figure data-type="image" tabindex="1"><img src="https://www.ztianzeng.com/post-images/1623224554260.jpg" alt="" loading="lazy"></figure>
+<h1 id="目前有问题的软件">目前有问题的软件</h1>
+<h2 id="微信闪退">微信闪退</h2>
+<p>更新之后闪退，而且无法安装微信小助手。从网上的讨论来看只涉及到Intel的芯片，M1的能够打开，但是点击图片闪退。</p>
+<p>无论从官网重新下载还是通过appstore重新安装，都无法正常打开。</p>
+<p>只有下载内测版，能够勉强登录微信，时不时也会闪退。只有等着官方适配了</p>
+<p>内测版下载地址:  https://mac.weixin.qq.com/?beta=1</p>
+<h2 id="wps">WPS</h2>
+<p><img src="https://www.ztianzeng.com/post-images/1623226623808.jpg" alt="" loading="lazy"><br>
+wps也时不时闪退，看官网已经说升级了 10.12。但是还是闪退</p>
+<h2 id="alfred">Alfred</h2>
+<p>破解版打不开了，支持正版吧</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[稀缺读后感]]></title>
         <id>https://www.ztianzeng.com/post/xi-que-du-hou-gan/</id>
