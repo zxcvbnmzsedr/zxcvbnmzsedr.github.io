@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.ztianzeng.com</id>
     <title>天增的博客</title>
-    <updated>2021-06-09T08:17:17.984Z</updated>
+    <updated>2021-06-10T08:07:08.342Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.ztianzeng.com"/>
     <link rel="self" href="https://www.ztianzeng.com/atom.xml"/>
@@ -23,8 +23,10 @@
 <h2 id="微信闪退">微信闪退</h2>
 <p>更新之后闪退，而且无法安装微信小助手。从网上的讨论来看只涉及到Intel的芯片，M1的能够打开，但是点击图片闪退。</p>
 <p>无论从官网重新下载还是通过appstore重新安装，都无法正常打开。</p>
-<p>只有下载内测版，能够勉强登录微信，时不时也会闪退。只有等着官方适配了</p>
-<p>内测版下载地址:  https://mac.weixin.qq.com/?beta=1</p>
+<p><s>只有下载2.0的内测版本，能够勉强登录微信，时不时也会闪退。只有等着官方适配了</s></p>
+<p><s>内测版下载地址:  https://mac.weixin.qq.com/?beta=1</s></p>
+<p>官方已经发布了新的版本，解决了闪退问题。</p>
+<p><a href="https://support.qq.com/products/292433/faqs/96666">https://support.qq.com/products/292433/faqs/96666</a></p>
 <h2 id="wps">WPS</h2>
 <p><img src="https://www.ztianzeng.com/post-images/1623226623808.jpg" alt="" loading="lazy"><br>
 wps也时不时闪退，看官网已经说升级了 10.12。但是还是闪退</p>
