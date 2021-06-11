@@ -1,0 +1,330 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>在Spring2.4中使用NacosConfig | 天增的博客</title>
+
+<link rel="shortcut icon" href="https://www.ztianzeng.com/favicon.ico?v=1623405420331">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://www.ztianzeng.com/styles/main.css">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css"> -->
+
+<style>
+    hr {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        border: 0;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script> -->
+<!-- DEMO JS -->
+<!--<script src="media/scripts/index.js"></script>-->
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            天增的博客
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="changeNavbar">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+            <div class="nav-item">
+                
+                <a href="/" class="menu gt-a-link">
+                    首页
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/archives" class="menu gt-a-link">
+                    归档
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/tags" class="menu gt-a-link">
+                    标签
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/post/about" class="menu gt-a-link">
+                    关于
+                </a>
+                
+            </div>
+            
+        </div>
+        <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1623405420331"
+                action="/search/">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 9px; left: 10px;"></i>
+            </form>
+        </div>
+    </div>
+</nav>
+<script>
+    /* 移动端导航栏展开/收起切换 */
+    document.getElementById('changeNavbar').onclick = () => {
+        var element = document.getElementById('navbarSupportedContent');
+        if (element.style.display === 'none' || element.style.display === '') {
+            element.style.display = 'block';
+        } else {
+            element.style.display = 'none';
+        }
+    }
+</script>
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    在Spring2.4中使用NacosConfig
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2021-06-11 ·
+                    </time>
+                    
+                </div>
+                <div class="post-content">
+                    <p>因为spring cloud alibaba没有进行升级，导致在spring2.4下，无法通过最新的方式引用配置文件。</p>
+<p>心中甚是不爽，因此基于最新的配置规则，给nacos打了个布丁。</p>
+<h1 id="修改原始配置文件">修改原始配置文件</h1>
+<p>将原本的工程的application.yml改成这样，重点是optional:nacos 后面的一定要是nacos</p>
+<p>别的就基本遵循nacos原本的配置就好了，该是啥样就啥样</p>
+<pre><code class="language-yml">spring:
+  cloud:
+    nacos:
+      server-addr: www.nacos.com:80
+      config:
+        shared-configs:
+          - data-id: ...
+        file-extension: yaml
+        namespace: ${spring.profiles.active}
+  config:
+    import: optional:nacos:${spring.cloud.nacos.server-addr}
+</code></pre>
+<h1 id="新增springfactories">新增spring.factories</h1>
+<pre><code class="language-properties">文件位置在这里
+resources/
+   META-INF/
+      spring.factories
+# 自己在前面添加包名
+org.springframework.boot.context.config.ConfigDataLocationResolver=\
+NacosConfigDataLocationResolver
+
+org.springframework.boot.context.config.ConfigDataLoader=\
+NacosServerConfigDataLoader
+</code></pre>
+<h1 id="创建对应的配置文件位置解析和配置文件夹在">创建对应的配置文件位置解析和配置文件夹在</h1>
+<h2 id="nacosconfigdatalocationresolverjava">NacosConfigDataLocationResolver.java</h2>
+<pre><code class="language-java">import com.alibaba.cloud.nacos.NacosConfigManager;
+import com.alibaba.cloud.nacos.NacosConfigProperties;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.context.config.*;
+import org.springframework.boot.context.properties.bind.BindHandler;
+import org.springframework.boot.context.properties.bind.Bindable;
+import org.springframework.boot.context.properties.bind.Binder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.core.Ordered;
+import org.springframework.core.env.StandardEnvironment;
+import org.springframework.util.StringUtils;
+
+import java.util.Collections;
+import java.util.List;
+
+public class NacosConfigDataLocationResolver implements ConfigDataLocationResolver&lt;NacosServerConfigDataResource&gt;, Ordered {
+
+    /**
+     * 就这个是让配置文件找到这个解析器的核心字符串，千万不能写错了
+     */
+    public static final String PREFIX = &quot;nacos:&quot;;
+
+    public NacosConfigDataLocationResolver() {
+
+    }
+
+    @Bean
+    @ConditionalOnMissingBean
+    public NacosConfigProperties nacosConfigProperties() {
+        return new NacosConfigProperties();
+    }
+
+    @Override
+    public int getOrder() {
+        return -1;
+    }
+
+    @Override
+    public boolean isResolvable(ConfigDataLocationResolverContext context, ConfigDataLocation location) {
+        return location.hasPrefix(PREFIX);
+    }
+
+    @Override
+    public List&lt;NacosServerConfigDataResource&gt; resolve(ConfigDataLocationResolverContext context, ConfigDataLocation location) throws ConfigDataLocationNotFoundException, ConfigDataResourceNotFoundException {
+        return Collections.emptyList();
+    }
+
+    @Override
+    public List&lt;NacosServerConfigDataResource&gt; resolveProfileSpecific(ConfigDataLocationResolverContext context, ConfigDataLocation location, Profiles profiles) throws ConfigDataLocationNotFoundException {
+        String uris = location.getNonPrefixedValue(PREFIX);
+        final NacosConfigProperties properties = loadProperties(context);
+        properties.setServerAddr(uris);
+
+        return Collections.singletonList(new NacosServerConfigDataResource(new NacosConfigManager(properties)));
+    }
+
+    protected NacosConfigProperties loadProperties(ConfigDataLocationResolverContext context) {
+        Binder binder = context.getBinder();
+        BindHandler bindHandler = getBindHandler(context);
+        NacosConfigProperties configClientProperties = binder
+                .bind(NacosConfigProperties.PREFIX, Bindable.of(NacosConfigProperties.class), bindHandler)
+                .orElseGet(NacosConfigProperties::new);
+        configClientProperties.setEnvironment(new StandardEnvironment());
+        if (!StringUtils.hasText(configClientProperties.getName())) {
+            // default to spring.application.name if name isn't set
+            String applicationName = binder.bind(&quot;spring.application.name&quot;, Bindable.of(String.class), bindHandler)
+                    .orElse(&quot;application&quot;);
+            configClientProperties.setPrefix(applicationName);
+        }
+        return configClientProperties;
+    }
+
+    private BindHandler getBindHandler(ConfigDataLocationResolverContext context) {
+        return context.getBootstrapContext().getOrElse(BindHandler.class, null);
+    }
+}
+
+</code></pre>
+<h2 id="nacosserverconfigdataloaderjava">NacosServerConfigDataLoader.java</h2>
+<pre><code class="language-java">import com.alibaba.cloud.nacos.NacosConfigManager;
+import com.alibaba.cloud.nacos.client.NacosPropertySourceLocator;
+import org.springframework.boot.context.config.ConfigData;
+import org.springframework.boot.context.config.ConfigDataLoader;
+import org.springframework.boot.context.config.ConfigDataLoaderContext;
+import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
+import org.springframework.core.env.PropertySource;
+import org.springframework.core.env.StandardEnvironment;
+
+import java.util.Collections;
+
+
+public class NacosServerConfigDataLoader implements ConfigDataLoader&lt;NacosServerConfigDataResource&gt; {
+
+
+    @Override
+    public ConfigData load(ConfigDataLoaderContext context, NacosServerConfigDataResource resource) throws ConfigDataResourceNotFoundException {
+        NacosConfigManager nacosConfigManager = resource.getNacosConfigManager();
+        final NacosPropertySourceLocator nacosPropertySourceLocator = new NacosPropertySourceLocator(nacosConfigManager);
+        final PropertySource&lt;?&gt; locate = nacosPropertySourceLocator.locate(new StandardEnvironment());
+        return new ConfigData(Collections.singletonList(locate));
+    }
+}
+
+</code></pre>
+<h2 id="nacosserverconfigdataresourcejava">NacosServerConfigDataResource.java</h2>
+<pre><code class="language-java">import com.alibaba.cloud.nacos.NacosConfigManager;
+import org.springframework.boot.context.config.ConfigDataResource;
+
+public class NacosServerConfigDataResource extends ConfigDataResource {
+    private NacosConfigManager nacosConfigManager;
+
+    public NacosServerConfigDataResource(NacosConfigManager nacosConfigManager) {
+        this.nacosConfigManager = nacosConfigManager;
+    }
+
+    public NacosConfigManager getNacosConfigManager() {
+        return nacosConfigManager;
+    }
+}
+
+</code></pre>
+<h1 id="后续">后续</h1>
+<p>创建好这些文件，如果不出意外的话应该能够将工程运行起来</p>
+<p>主要核心就是继承 ConfigDataLocationResolver 和 ConfigDataLoader</p>
+<p>ConfigDataLocationResolver 用于冷启动时，初始化各种参数，打包成一个ConfigDataResource交由给ConfigDataLoader使用</p>
+<p>ConfigDataLoader则是通过ConfigDataResource进行配置文件的加载，加载到Environment中供应用程式使用</p>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://www.ztianzeng.com/post/spring24/" class="post-title gt-a-link">
+                    Spring2.4
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">躺平</div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        <a href="http://www.beian.miit.gov.cn/" class="theme-link" rel="noopener" target="_blank">苏ICP备16037388号-1</a>
+    </div>
+    <div>
+        Theme by <a href="https://imhanjie.com/" target="_blank">imhanjie</a>, Powered by <a
+                href="https://github.com/getgridea/gridea" target="_blank">Gridea | <a href="https://www.ztianzeng.com/atom.xml" target="_blank">RSS</a></a>
+    </div>
+</div>
+
+<script>
+  hljs.highlightAll()
+</script>
+
+    </div>
+</div>
+</body>
+</html>

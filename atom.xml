@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.ztianzeng.com</id>
     <title>天增的博客</title>
-    <updated>2021-06-10T08:07:08.342Z</updated>
+    <updated>2021-06-11T09:57:04.973Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.ztianzeng.com"/>
     <link rel="self" href="https://www.ztianzeng.com/atom.xml"/>
@@ -10,6 +10,282 @@
     <logo>https://www.ztianzeng.com/images/avatar.png</logo>
     <icon>https://www.ztianzeng.com/favicon.ico</icon>
     <rights>All rights reserved 2021, 天增的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[在Spring2.4中使用NacosConfig]]></title>
+        <id>https://www.ztianzeng.com/post/zai-spring24-zhong-shi-yong-nacosconfig/</id>
+        <link href="https://www.ztianzeng.com/post/zai-spring24-zhong-shi-yong-nacosconfig/">
+        </link>
+        <updated>2021-06-11T09:17:22.000Z</updated>
+        <content type="html"><![CDATA[<p>因为spring cloud alibaba没有进行升级，导致在spring2.4下，无法通过最新的方式引用配置文件。</p>
+<p>心中甚是不爽，因此基于最新的配置规则，给nacos打了个布丁。</p>
+<h1 id="修改原始配置文件">修改原始配置文件</h1>
+<p>将原本的工程的application.yml改成这样，重点是optional:nacos 后面的一定要是nacos</p>
+<p>别的就基本遵循nacos原本的配置就好了，该是啥样就啥样</p>
+<pre><code class="language-yml">spring:
+  cloud:
+    nacos:
+      server-addr: www.nacos.com:80
+      config:
+        shared-configs:
+          - data-id: ...
+        file-extension: yaml
+        namespace: ${spring.profiles.active}
+  config:
+    import: optional:nacos:${spring.cloud.nacos.server-addr}
+</code></pre>
+<h1 id="新增springfactories">新增spring.factories</h1>
+<pre><code class="language-properties">文件位置在这里
+resources/
+   META-INF/
+      spring.factories
+# 自己在前面添加包名
+org.springframework.boot.context.config.ConfigDataLocationResolver=\
+NacosConfigDataLocationResolver
+
+org.springframework.boot.context.config.ConfigDataLoader=\
+NacosServerConfigDataLoader
+</code></pre>
+<h1 id="创建对应的配置文件位置解析和配置文件夹在">创建对应的配置文件位置解析和配置文件夹在</h1>
+<h2 id="nacosconfigdatalocationresolverjava">NacosConfigDataLocationResolver.java</h2>
+<pre><code class="language-java">import com.alibaba.cloud.nacos.NacosConfigManager;
+import com.alibaba.cloud.nacos.NacosConfigProperties;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.context.config.*;
+import org.springframework.boot.context.properties.bind.BindHandler;
+import org.springframework.boot.context.properties.bind.Bindable;
+import org.springframework.boot.context.properties.bind.Binder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.core.Ordered;
+import org.springframework.core.env.StandardEnvironment;
+import org.springframework.util.StringUtils;
+
+import java.util.Collections;
+import java.util.List;
+
+public class NacosConfigDataLocationResolver implements ConfigDataLocationResolver&lt;NacosServerConfigDataResource&gt;, Ordered {
+
+    /**
+     * 就这个是让配置文件找到这个解析器的核心字符串，千万不能写错了
+     */
+    public static final String PREFIX = &quot;nacos:&quot;;
+
+    public NacosConfigDataLocationResolver() {
+
+    }
+
+    @Bean
+    @ConditionalOnMissingBean
+    public NacosConfigProperties nacosConfigProperties() {
+        return new NacosConfigProperties();
+    }
+
+    @Override
+    public int getOrder() {
+        return -1;
+    }
+
+    @Override
+    public boolean isResolvable(ConfigDataLocationResolverContext context, ConfigDataLocation location) {
+        return location.hasPrefix(PREFIX);
+    }
+
+    @Override
+    public List&lt;NacosServerConfigDataResource&gt; resolve(ConfigDataLocationResolverContext context, ConfigDataLocation location) throws ConfigDataLocationNotFoundException, ConfigDataResourceNotFoundException {
+        return Collections.emptyList();
+    }
+
+    @Override
+    public List&lt;NacosServerConfigDataResource&gt; resolveProfileSpecific(ConfigDataLocationResolverContext context, ConfigDataLocation location, Profiles profiles) throws ConfigDataLocationNotFoundException {
+        String uris = location.getNonPrefixedValue(PREFIX);
+        final NacosConfigProperties properties = loadProperties(context);
+        properties.setServerAddr(uris);
+
+        return Collections.singletonList(new NacosServerConfigDataResource(new NacosConfigManager(properties)));
+    }
+
+    protected NacosConfigProperties loadProperties(ConfigDataLocationResolverContext context) {
+        Binder binder = context.getBinder();
+        BindHandler bindHandler = getBindHandler(context);
+        NacosConfigProperties configClientProperties = binder
+                .bind(NacosConfigProperties.PREFIX, Bindable.of(NacosConfigProperties.class), bindHandler)
+                .orElseGet(NacosConfigProperties::new);
+        configClientProperties.setEnvironment(new StandardEnvironment());
+        if (!StringUtils.hasText(configClientProperties.getName())) {
+            // default to spring.application.name if name isn't set
+            String applicationName = binder.bind(&quot;spring.application.name&quot;, Bindable.of(String.class), bindHandler)
+                    .orElse(&quot;application&quot;);
+            configClientProperties.setPrefix(applicationName);
+        }
+        return configClientProperties;
+    }
+
+    private BindHandler getBindHandler(ConfigDataLocationResolverContext context) {
+        return context.getBootstrapContext().getOrElse(BindHandler.class, null);
+    }
+}
+
+</code></pre>
+<h2 id="nacosserverconfigdataloaderjava">NacosServerConfigDataLoader.java</h2>
+<pre><code class="language-java">import com.alibaba.cloud.nacos.NacosConfigManager;
+import com.alibaba.cloud.nacos.client.NacosPropertySourceLocator;
+import org.springframework.boot.context.config.ConfigData;
+import org.springframework.boot.context.config.ConfigDataLoader;
+import org.springframework.boot.context.config.ConfigDataLoaderContext;
+import org.springframework.boot.context.config.ConfigDataResourceNotFoundException;
+import org.springframework.core.env.PropertySource;
+import org.springframework.core.env.StandardEnvironment;
+
+import java.util.Collections;
+
+
+public class NacosServerConfigDataLoader implements ConfigDataLoader&lt;NacosServerConfigDataResource&gt; {
+
+
+    @Override
+    public ConfigData load(ConfigDataLoaderContext context, NacosServerConfigDataResource resource) throws ConfigDataResourceNotFoundException {
+        NacosConfigManager nacosConfigManager = resource.getNacosConfigManager();
+        final NacosPropertySourceLocator nacosPropertySourceLocator = new NacosPropertySourceLocator(nacosConfigManager);
+        final PropertySource&lt;?&gt; locate = nacosPropertySourceLocator.locate(new StandardEnvironment());
+        return new ConfigData(Collections.singletonList(locate));
+    }
+}
+
+</code></pre>
+<h2 id="nacosserverconfigdataresourcejava">NacosServerConfigDataResource.java</h2>
+<pre><code class="language-java">import com.alibaba.cloud.nacos.NacosConfigManager;
+import org.springframework.boot.context.config.ConfigDataResource;
+
+public class NacosServerConfigDataResource extends ConfigDataResource {
+    private NacosConfigManager nacosConfigManager;
+
+    public NacosServerConfigDataResource(NacosConfigManager nacosConfigManager) {
+        this.nacosConfigManager = nacosConfigManager;
+    }
+
+    public NacosConfigManager getNacosConfigManager() {
+        return nacosConfigManager;
+    }
+}
+
+</code></pre>
+<h1 id="后续">后续</h1>
+<p>创建好这些文件，如果不出意外的话应该能够将工程运行起来</p>
+<p>主要核心就是继承 ConfigDataLocationResolver 和 ConfigDataLoader</p>
+<p>ConfigDataLocationResolver 用于冷启动时，初始化各种参数，打包成一个ConfigDataResource交由给ConfigDataLoader使用</p>
+<p>ConfigDataLoader则是通过ConfigDataResource进行配置文件的加载，加载到Environment中供应用程式使用</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Spring2.4]]></title>
+        <id>https://www.ztianzeng.com/post/spring24/</id>
+        <link href="https://www.ztianzeng.com/post/spring24/">
+        </link>
+        <updated>2021-06-11T02:37:18.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="全新的配置文件处理">全新的配置文件处理</h1>
+<p>我感觉最大的改变是提供了新的配置文件的加载方式，为了去适应k8s容器化部署中的configMap。</p>
+<p>如果不想使用新的加载方式，依然提供了旧版的加载方式</p>
+<p>引入依赖</p>
+<pre><code class="language-xml">&lt;dependency&gt;
+  &lt;groupId&gt;org.springframework.cloud&lt;/groupId&gt;
+  &lt;artifactId&gt;spring-cloud-starter-bootstrap&lt;/artifactId&gt;
+  &lt;version&gt;3.0.3&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p>在配置文件中加上 spring.config.use-legacy-processing=true</p>
+<h2 id="新版加载方式springconfigimport属性">新版加载方式spring.config.import属性</h2>
+<p>spring.config.import属性可被视作这个版本最为牛逼的属性。</p>
+<p>可以从不同的位置加载数据</p>
+<ol>
+<li>加载classpath数据</li>
+</ol>
+<pre><code class="language-properties">spring.config.import=optional:file:./dev.properties
+</code></pre>
+<ol>
+<li>加载文件系统的数据</li>
+</ol>
+<pre><code class="language-properties">spring.config.import=file:/etc/config/myconfig[.yaml]
+</code></pre>
+<ol start="3">
+<li>加载Kubernetes的configMap(先将Kubernetes的数据挂载到卷轴上，然后在进行引用)<br>
+<a href="https://kubernetes.io/docs/concepts/configuration/secret/#using-secrets-as-files-from-a-pod">如何配置看这里</a></li>
+</ol>
+<pre><code class="language-properties">spring.config.import=optional:configtree:/etc/config/
+</code></pre>
+<ol start="4">
+<li>自定义加载数据，你可以通过自己喜欢的方式去从任意位置加载配置文件<br>
+<a href="/post/zai-spring24-zhong-shi-yong-nacosconfig/">😃具体使用方式看这里</a></li>
+</ol>
+<h1 id="新的版本描述方案">新的版本描述方案</h1>
+<p>为了更加照顾英语非母语的开发者，spring采用了新的命名方案。</p>
+<p>之前那套用英文命名的真的让人摸不着头脑，英语也就算了，还整些个不常用的生词。</p>
+<p>单词的拼写很困难，版本号全靠复制。</p>
+<p>而且版本号上面也难以看出版本向下兼容性，很难做出判断而做出风险预估。</p>
+<p>为了解决这些问题</p>
+<p>Spring采用了日历化版本，并且使用的规则/公式是YYYY.MINOR.MICRO[-MODIFIER]，</p>
+<h3 id="对各部分解释如下">对各部分解释如下：</h3>
+<ul>
+<li>YYYY：年份全称。eg：2020</li>
+<li>MINOR：辅助版本号（一般升级些非主线功能），在当前年内从0递增</li>
+<li>MICRO：补丁版本号（一般修复些bug），在当前年内从0递增</li>
+<li>MODIFIER：非必填。后缀，它用于修饰一些关键节点，用这些字母表示</li>
+<li>M数字：里程碑版本，如2020.0.0-M1、2020.0.0-M2</li>
+<li>RC数字：发布候选版本，如2020.0.0-RC1、2020.0.0-RC2</li>
+<li>SNAPSHOT：快照版本（后无数字），如2020.0.0-SNAPSHOT</li>
+<li>啥都木有：正式版本（可放心使用，相当于之前的xxx-RELEASE），如2020.0.0</li>
+</ul>
+<hr>
+<h1 id="r2dbc">R2DBC</h1>
+<p>AR2dbcEntityTemplate可用于通过实体简化 Reactive R2DBC 的使用</p>
+<h1 id="java-15-支持">Java 15 支持</h1>
+<p>Spring Boot 2.4 现在完全支持（并针对）Java 15。支持的最低版本仍然是 Java 8。</p>
+<h1 id="自定义属性名称支持">自定义属性名称支持</h1>
+<p>如果想注入的名称和java关键字想冲突可以使用@Name属性进行注入</p>
+<pre><code class="language-java">@ConfigurationProperties(prefix = &quot;sample&quot;)
+@ConstructorBinding
+public class SampleConfigurationProperties {
+
+  private final String importValue;
+
+  public SampleConfigurationProperties(@Name(&quot;import&quot;) String importValue) {
+    this.importValue = importValue;
+  }
+
+}
+</code></pre>
+<h1 id="依赖升级">依赖升级</h1>
+<ul>
+<li>Spring AMQP 2.3</li>
+<li>Spring Batch 4.</li>
+<li>Spring Data 2020.0</li>
+<li>Spring Framework 5.3</li>
+<li>Spring Integration 5.4</li>
+<li>Spring HATEOAS 1.2</li>
+<li>Spring Kafka 2</li>
+<li>Spring Retry 1.3</li>
+<li>Spring Security 5.4</li>
+<li>Spring Session 2020.0</li>
+</ul>
+<p>还更新了许多第三方依赖项：</p>
+<ul>
+<li>Artemis 2.13</li>
+<li>AssertJ 3.18</li>
+<li>Cassandra Driver 4.7</li>
+<li>Elasticsearch 7.9</li>
+<li>Flyway 7</li>
+<li>Jersey 2.31</li>
+<li>JUnit 5.7</li>
+<li>Liquibase 3.10</li>
+<li>Lettuce 6.0</li>
+<li>Micrometer 1.6</li>
+<li>Mockito 3.4</li>
+<li>MongoDB 4.1</li>
+<li>Oracle Database 19.7</li>
+<li>Reactor 2020.0</li>
+<li>RSocket 1.1</li>
+<li>Undertow 2.2</li>
+</ul>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[苹果 macOS 12 Monterey 升级]]></title>
         <id>https://www.ztianzeng.com/post/ping-guo-macos-12-monterey-sheng-ji/</id>
