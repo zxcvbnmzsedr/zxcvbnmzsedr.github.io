@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.ztianzeng.com</id>
     <title>天增的博客</title>
-    <updated>2021-06-11T10:02:26.453Z</updated>
+    <updated>2021-06-15T05:30:22.500Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.ztianzeng.com"/>
     <link rel="self" href="https://www.ztianzeng.com/atom.xml"/>
@@ -305,7 +305,8 @@ public class SampleConfigurationProperties {
 <p><a href="https://support.qq.com/products/292433/faqs/96666">https://support.qq.com/products/292433/faqs/96666</a></p>
 <h2 id="wps">WPS</h2>
 <p><img src="https://www.ztianzeng.com/post-images/1623226623808.jpg" alt="" loading="lazy"><br>
-wps也时不时闪退，看官网已经说升级了 10.12。但是还是闪退</p>
+<s>wps也时不时闪退，看官网已经说升级了 10.12。但是还是闪退</s></p>
+<p>wps官网已经更新到3.7.0，正常了</p>
 <h2 id="alfred">Alfred</h2>
 <p>破解版打不开了，支持正版吧</p>
 ]]></content>
