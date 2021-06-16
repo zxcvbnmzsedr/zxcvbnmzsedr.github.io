@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.ztianzeng.com</id>
     <title>天增的博客</title>
-    <updated>2021-06-15T05:30:22.500Z</updated>
+    <updated>2021-06-16T11:26:54.535Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.ztianzeng.com"/>
     <link rel="self" href="https://www.ztianzeng.com/atom.xml"/>
@@ -10,6 +10,23 @@
     <logo>https://www.ztianzeng.com/images/avatar.png</logo>
     <icon>https://www.ztianzeng.com/favicon.ico</icon>
     <rights>All rights reserved 2021, 天增的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[File "/bin/yum-config-manager", line 135 except yum.Errors.RepoError, e:]]></title>
+        <id>https://www.ztianzeng.com/post/file-binyum-config-manager-line-135-except-yumerrorsrepoerror-e/</id>
+        <link href="https://www.ztianzeng.com/post/file-binyum-config-manager-line-135-except-yumerrorsrepoerror-e/">
+        </link>
+        <updated>2021-06-16T11:24:30.000Z</updated>
+        <content type="html"><![CDATA[<p>Python的版本不正确导致的问题</p>
+<figure data-type="image" tabindex="1"><img src="https://www.ztianzeng.com/post-images/1623842775523.jpg" alt="" loading="lazy"></figure>
+<pre><code class="language-shell"># 查看当前版本
+python -V
+# Python 3.7
+vim /usr/bin/yum-config-manager
+</code></pre>
+<p>修改成python2</p>
+<figure data-type="image" tabindex="2"><img src="https://www.ztianzeng.com/post-images/1623842796505.jpg" alt="" loading="lazy"></figure>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[在Spring2.4中使用NacosConfig]]></title>
         <id>https://www.ztianzeng.com/post/zai-spring24-zhong-shi-yong-nacosconfig/</id>
