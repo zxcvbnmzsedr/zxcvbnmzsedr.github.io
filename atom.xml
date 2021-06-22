@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.ztianzeng.com</id>
     <title>天增的博客</title>
-    <updated>2021-06-16T11:32:38.099Z</updated>
+    <updated>2021-06-22T02:17:59.291Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.ztianzeng.com"/>
     <link rel="self" href="https://www.ztianzeng.com/atom.xml"/>
@@ -10,6 +10,93 @@
     <logo>https://www.ztianzeng.com/images/avatar.png</logo>
     <icon>https://www.ztianzeng.com/favicon.ico</icon>
     <rights>All rights reserved 2021, 天增的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[Openwrt搭建免流服务器]]></title>
+        <id>https://www.ztianzeng.com/post/openwrt-da-jian-mian-liu-fu-wu-qi/</id>
+        <link href="https://www.ztianzeng.com/post/openwrt-da-jian-mian-liu-fu-wu-qi/">
+        </link>
+        <updated>2021-06-22T01:35:49.000Z</updated>
+        <content type="html"><![CDATA[<p>之前在阿里云上通过V2Ray搭建了免流服务器，奈何固定带宽速度太慢，而流量计费高达0.8元/G的成本又和绝大多数的互联网套餐价格相差无几。</p>
+<p>因此就琢磨着，是不是可以在家中，通过公网IP来自建免流服务器。</p>
+<h1 id="要求">要求</h1>
+<ol>
+<li>Openwrt 必须能够获取到公网地址(必须得是IPV4，实测IPV6不免)</li>
+<li>卡里面需要有定向的免费流量套餐</li>
+<li>DDNS内网穿透</li>
+</ol>
+<h1 id="原理">原理</h1>
+<p>因为运营商的代理服务器和运营商的计费检测系统是分离的，通过欺骗的方式，把真实的流量代理成免费的流量<br>
+<img src="https://www.ztianzeng.com/post-images/1624328188614.jpg" alt="" loading="lazy"></p>
+<h1 id="步骤">步骤</h1>
+<h2 id="安装v2ray">安装V2RAY</h2>
+<ul>
+<li>v2ray-core ipk安装包<br>
+https://github.com/kuoruan/openwrt-v2ray/releases</li>
+<li>luci界面和中文支持<br>
+https://github.com/kuoruan/luci-app-v2ray/releases</li>
+</ul>
+<figure data-type="image" tabindex="1"><img src="https://www.ztianzeng.com/post-images/1624327400258.jpg" alt="" loading="lazy"></figure>
+<h2 id="编写配置文件">编写配置文件</h2>
+<pre><code>{
+	&quot;log&quot;: {
+		&quot;loglevel&quot;: &quot;warning&quot;
+	},
+	&quot;inbound&quot;: {
+		&quot;protocol&quot;: &quot;vmess&quot;,
+		&quot;port&quot;: 80,
+		&quot;settings&quot;: {
+			&quot;clients&quot;: [{
+				&quot;id&quot;: &quot;ad806487-2d26-4636-98b6-ab85cc8521f7&quot;,
+				&quot;alterId&quot;: 64,
+				&quot;security&quot;: &quot;chacha20-poly1305&quot;
+			}]
+		},
+		&quot;streamSettings&quot;: {
+			&quot;network&quot;: &quot;tcp&quot;,
+			&quot;httpSettings&quot;: {
+				&quot;path&quot;: &quot;/&quot;
+			},
+			&quot;tcpSettings&quot;: {
+				&quot;header&quot;: {
+					&quot;type&quot;: &quot;http&quot;,
+					&quot;response&quot;: {
+						&quot;version&quot;: &quot;1.1&quot;,
+						&quot;status&quot;: &quot;200&quot;,
+						&quot;reason&quot;: &quot;OK&quot;,
+						&quot;headers&quot;: {
+							&quot;Content-Type&quot;: [&quot;application/octet-stream&quot;, &quot;application/x-msdownload&quot;, &quot;text/html&quot;, &quot;application/x-shockwave-flash&quot;],
+							&quot;Transfer-Encoding&quot;: [&quot;chunked&quot;],
+							&quot;Connection&quot;: [&quot;keep-alive&quot;],
+							&quot;Pragma&quot;: &quot;no-cache&quot;
+						}
+					}
+				}
+			}
+		}
+	},
+	&quot;inboundDetour&quot;: [],
+	&quot;outbound&quot;: {
+		&quot;protocol&quot;: &quot;freedom&quot;,
+		&quot;settings&quot;: {}
+	}
+}
+
+</code></pre>
+<h2 id="防火墙开放端口">防火墙开放端口</h2>
+<h1 id="手机设置">手机设置</h1>
+<p>手机上安装V2RAY客户端</p>
+<p>家里动态域名<br>
+协议就是websocks (WS)<br>
+加密方式任意.<br>
+端口83<br>
+id填写配置文件.</p>
+<p>伪装协议为http<br>
+伪装host为免流host</p>
+<h1 id="最后">最后</h1>
+<p>慎用，哈哈<br>
+<img src="https://www.ztianzeng.com/post-images/1624327569228.jpeg" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[File "/bin/yum-config-manager", line 135 except yum.Errors.RepoError, e:]]></title>
         <id>https://www.ztianzeng.com/post/file-binyum-config-manager-line-135-except-yumerrorsrepoerror-e/</id>
