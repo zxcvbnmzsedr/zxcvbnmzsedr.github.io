@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>Openwrt搭建免流服务器 | 天增的博客</title>
+<title>Jenkins容器安装python3环境 | 天增的博客</title>
 
 <link rel="shortcut icon" href="https://www.ztianzeng.com/favicon.ico?v=1626313470207">
 
@@ -108,95 +108,51 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    Openwrt搭建免流服务器
+                    Jenkins容器安装python3环境
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
-                        · 2021-06-22 ·
+                        · 2021-07-13 ·
                     </time>
                     
                 </div>
                 <div class="post-content">
-                    <p>之前在阿里云上通过V2Ray搭建了免流服务器，奈何固定带宽速度太慢，而流量计费高达0.8元/G的成本又和绝大多数的互联网套餐价格相差无几。</p>
-<p>因此就琢磨着，是不是可以在家中，通过公网IP来自建免流服务器。</p>
-<h1 id="要求">要求</h1>
-<ol>
-<li>Openwrt 必须能够获取到公网地址(IPV4或者PV6)</li>
-<li>卡里面需要有定向的免费流量套餐</li>
-<li>DDNS内网穿透</li>
-<li>如果是联通卡的话，得是80端口</li>
-</ol>
-<h1 id="原理">原理</h1>
-<p>因为运营商的代理服务器和运营商的计费检测系统是分离的，通过欺骗的方式，把真实的流量代理成免费的流量<br>
-<img src="https://www.ztianzeng.com/post-images/1624328188614.jpg" alt="" loading="lazy"></p>
-<h1 id="步骤">步骤</h1>
-<h2 id="安装v2ray">安装V2RAY</h2>
-<ul>
-<li>v2ray-core ipk安装包<br>
-https://github.com/kuoruan/openwrt-v2ray/releases</li>
-<li>luci界面和中文支持<br>
-https://github.com/kuoruan/luci-app-v2ray/releases</li>
-</ul>
-<figure data-type="image" tabindex="1"><img src="https://www.ztianzeng.com/post-images/1624327400258.jpg" alt="" loading="lazy"></figure>
-<h2 id="编写配置文件">编写配置文件</h2>
-<pre><code>{
-	&quot;log&quot;: {
-		&quot;loglevel&quot;: &quot;warning&quot;
-	},
-	&quot;inbound&quot;: {
-		&quot;protocol&quot;: &quot;vmess&quot;,
-		&quot;port&quot;: 80,
-		&quot;settings&quot;: {
-			&quot;clients&quot;: [{
-				&quot;id&quot;: &quot;ad806487-2d26-4636-98b6-ab85cc8521f7&quot;,
-				&quot;alterId&quot;: 64,
-				&quot;security&quot;: &quot;chacha20-poly1305&quot;
-			}]
-		},
-		&quot;streamSettings&quot;: {
-			&quot;network&quot;: &quot;tcp&quot;,
-			&quot;httpSettings&quot;: {
-				&quot;path&quot;: &quot;/&quot;
-			},
-			&quot;tcpSettings&quot;: {
-				&quot;header&quot;: {
-					&quot;type&quot;: &quot;http&quot;,
-					&quot;response&quot;: {
-						&quot;version&quot;: &quot;1.1&quot;,
-						&quot;status&quot;: &quot;200&quot;,
-						&quot;reason&quot;: &quot;OK&quot;,
-						&quot;headers&quot;: {
-							&quot;Content-Type&quot;: [&quot;application/octet-stream&quot;, &quot;application/x-msdownload&quot;, &quot;text/html&quot;, &quot;application/x-shockwave-flash&quot;],
-							&quot;Transfer-Encoding&quot;: [&quot;chunked&quot;],
-							&quot;Connection&quot;: [&quot;keep-alive&quot;],
-							&quot;Pragma&quot;: &quot;no-cache&quot;
-						}
-					}
-				}
-			}
-		}
-	},
-	&quot;inboundDetour&quot;: [],
-	&quot;outbound&quot;: {
-		&quot;protocol&quot;: &quot;freedom&quot;,
-		&quot;settings&quot;: {}
-	}
-}
-
+                    <p>https://www.cnblogs.com/yoyoketang/p/12116246.html</p>
+<p>在docker环境中安装jenkins，jenkins的构建环境是docker中的环境，默认的docker中默认只有python2而没有python3，因此需要再docker中手动装python3</p>
+<h1 id="进入jenkins容器">进入jenkins容器</h1>
+<p>docker exec -it -u root 容器id /bin/bash</p>
+<h1 id="容器内部安装python3">容器内部安装python3</h1>
+<h2 id="下载python3安装包">下载python3安装包</h2>
+<pre><code>cd /var/jenkins_home/
+mkdir python3 &amp;&amp; cd python3
+wget https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tgz
+tar -xvf Python-3.6.8.tgz
+cd Python-3.6.8
+./configure --prefix=/var/jenkins_home/python3
 </code></pre>
-<h2 id="防火墙开放端口">防火墙开放端口</h2>
-<h1 id="手机设置">手机设置</h1>
-<p>手机上安装V2RAY客户端</p>
-<p>家里动态域名<br>
-协议就是websocks (WS)<br>
-加密方式任意.<br>
-端口83<br>
-id填写配置文件.</p>
-<p>伪装协议为http<br>
-伪装host为免流host</p>
-<h1 id="最后">最后</h1>
-<p>慎用，哈哈<br>
-<img src="https://www.ztianzeng.com/post-images/1624327569228.jpeg" alt="" loading="lazy"></p>
+<p>如果执行后报错 configure: error: no acceptable C compiler found in $PATH 则是因为缺少gcc相关的依赖包</p>
+<h2 id="安装依赖包">安装依赖包</h2>
+<p>自行根据docker的系统镜像选用apt-get 或者 yum 进行安装</p>
+<pre><code>yum -y install gcc automake autoconf libtool make
+yum -y install make*
+yum -y install zlib*
+yum -y install openssl libssl-dev
+yum install sudo
+</code></pre>
+<h2 id="make-编译">make 编译</h2>
+<p>在python-3.6.8这个目录下重新执行安装</p>
+<pre><code>./configure --prefix=/var/jenkins_home/python3 --with-ssl
+make
+make install
+</code></pre>
+<h2 id="添加软连接">添加软连接</h2>
+<pre><code>ln -s /var/jenkins_home/python3/bin/python3.6 /usr/bin/python3
+ln -s /var/jenkins_home/python3/bin/pip3 /usr/bin/pip3
+</code></pre>
+<h2 id="检查是否安装成功">检查是否安装成功</h2>
+<pre><code>pip3
+python3
+</code></pre>
 
                 </div>
             </article>
@@ -205,14 +161,14 @@ id填写配置文件.</p>
         
             <div class="next-post">
                 <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://www.ztianzeng.com/post/file-binyum-config-manager-line-135-except-yumerrorsrepoerror-e/" class="post-title gt-a-link">
-                    File &#34;/bin/yum-config-manager&#34;, line 135 except yum.Errors.RepoError, e:
+                <a href="https://www.ztianzeng.com/post/openwrt-da-jian-mian-liu-fu-wu-qi/" class="post-title gt-a-link">
+                    Openwrt搭建免流服务器
                 </a>
             </div>
         
 
         
-            <span id="/post/openwrt-da-jian-mian-liu-fu-wu-qi/" class="leancloud_visitors" data-flag-title="Openwrt搭建免流服务器">
+            <span id="/post/jenkins-rong-qi-an-zhuang-python3-huan-jing/" class="leancloud_visitors" data-flag-title="Jenkins容器安装python3环境">
                 <em class="post-meta-item-text">阅读量 </em>
                 <i class="leancloud-visitors-count">0</i>
             </span>

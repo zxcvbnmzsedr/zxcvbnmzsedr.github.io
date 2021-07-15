@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.ztianzeng.com</id>
     <title>天增的博客</title>
-    <updated>2021-06-22T08:07:41.206Z</updated>
+    <updated>2021-07-15T01:44:33.703Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.ztianzeng.com"/>
     <link rel="self" href="https://www.ztianzeng.com/atom.xml"/>
@@ -10,6 +10,50 @@
     <logo>https://www.ztianzeng.com/images/avatar.png</logo>
     <icon>https://www.ztianzeng.com/favicon.ico</icon>
     <rights>All rights reserved 2021, 天增的博客</rights>
+    <entry>
+        <title type="html"><![CDATA[Jenkins容器安装python3环境]]></title>
+        <id>https://www.ztianzeng.com/post/jenkins-rong-qi-an-zhuang-python3-huan-jing/</id>
+        <link href="https://www.ztianzeng.com/post/jenkins-rong-qi-an-zhuang-python3-huan-jing/">
+        </link>
+        <updated>2021-07-13T11:42:24.000Z</updated>
+        <content type="html"><![CDATA[<p>https://www.cnblogs.com/yoyoketang/p/12116246.html</p>
+<p>在docker环境中安装jenkins，jenkins的构建环境是docker中的环境，默认的docker中默认只有python2而没有python3，因此需要再docker中手动装python3</p>
+<h1 id="进入jenkins容器">进入jenkins容器</h1>
+<p>docker exec -it -u root 容器id /bin/bash</p>
+<h1 id="容器内部安装python3">容器内部安装python3</h1>
+<h2 id="下载python3安装包">下载python3安装包</h2>
+<pre><code>cd /var/jenkins_home/
+mkdir python3 &amp;&amp; cd python3
+wget https://www.python.org/ftp/python/3.6.8/Python-3.6.8.tgz
+tar -xvf Python-3.6.8.tgz
+cd Python-3.6.8
+./configure --prefix=/var/jenkins_home/python3
+</code></pre>
+<p>如果执行后报错 configure: error: no acceptable C compiler found in $PATH 则是因为缺少gcc相关的依赖包</p>
+<h2 id="安装依赖包">安装依赖包</h2>
+<p>自行根据docker的系统镜像选用apt-get 或者 yum 进行安装</p>
+<pre><code>yum -y install gcc automake autoconf libtool make
+yum -y install make*
+yum -y install zlib*
+yum -y install openssl libssl-dev
+yum install sudo
+</code></pre>
+<h2 id="make-编译">make 编译</h2>
+<p>在python-3.6.8这个目录下重新执行安装</p>
+<pre><code>./configure --prefix=/var/jenkins_home/python3 --with-ssl
+make
+make install
+</code></pre>
+<h2 id="添加软连接">添加软连接</h2>
+<pre><code>ln -s /var/jenkins_home/python3/bin/python3.6 /usr/bin/python3
+ln -s /var/jenkins_home/python3/bin/pip3 /usr/bin/pip3
+</code></pre>
+<h2 id="检查是否安装成功">检查是否安装成功</h2>
+<pre><code>pip3
+python3
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Openwrt搭建免流服务器]]></title>
         <id>https://www.ztianzeng.com/post/openwrt-da-jian-mian-liu-fu-wu-qi/</id>
@@ -724,73 +768,6 @@ kubeadm join apiserver.demo:6443 --token mpfjma.4vjjg8flqihor4vt     --discovery
 <pre><code>kubectl get nodes
 </code></pre>
 <p>获取到对应的节点信息以及状态</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[K8S入门到放弃 —— 前置环境准备]]></title>
-        <id>https://www.ztianzeng.com/post/k8s-ru-men-dao-fang-qi-qian-zhi-huan-jing-zhun-bei/</id>
-        <link href="https://www.ztianzeng.com/post/k8s-ru-men-dao-fang-qi-qian-zhi-huan-jing-zhun-bei/">
-        </link>
-        <updated>2021-06-02T05:25:04.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="安装-docker-kubelet">安装 docker / kubelet</h1>
-<p>在每台要安装的机器上都执行这段脚本，安装所有k8s运行时需要的软件。</p>
-<pre><code>#!/bin/bash
-# 卸载旧版本
-sudo yum remove docker \
-                  docker-client \
-                  docker-client-latest \
-                  docker-common \
-                  docker-latest \
-                  docker-latest-logrotate \
-                  docker-logrotate \
-                  docker-engine
- sudo yum install -y yum-utils
- yum-config-manager \
-    --add-repo \
-    https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
-
-sed -i 's/download.docker.com/mirrors.aliyun.com\/docker-ce/g' /etc/yum.repos.d/docker-ce.repo
-# 安装并启动 docker
-sudo yum -y install docker-ce docker-ce-cli containerd.io    
-systemctl enable docker
-systemctl start docker
-systemctl stop firewalld
-systemctl disable firewalld
-
-# 安装 nfs-utils
-# 必须先安装 nfs-utils 才能挂载 nfs 网络存储
-yum install -y nfs-utils
-yum install -y wget
-
-# 关闭 SeLinux
-setenforce 0
-sed -i &quot;s/SELINUX=enforcing/SELINUX=disabled/g&quot; /etc/selinux/config
-
-# 关闭 swap
-swapoff -a
-yes | cp /etc/fstab /etc/fstab_bak
-cat /etc/fstab_bak |grep -v swap &gt; /etc/fstab
-# 修改 /etc/sysctl.conf
-# 如果有配置，则修改
-sed -i &quot;s#^net.ipv4.ip_forward.*#net.ipv4.ip_forward=1#g&quot;  /etc/sysctl.conf
-sed -i &quot;s#^net.bridge.bridge-nf-call-ip6tables.*#net.bridge.bridge-nf-call-ip6tables=1#g&quot;  /etc/sysctl.conf
-sed -i &quot;s#^net.bridge.bridge-nf-call-iptables.*#net.bridge.bridge-nf-call-iptables=1#g&quot;  /etc/sysctl.conf
-# 可能没有，追加
-echo &quot;net.ipv4.ip_forward = 1&quot; &gt;&gt; /etc/sysctl.conf
-echo &quot;net.bridge.bridge-nf-call-ip6tables = 1&quot; &gt;&gt; /etc/sysctl.conf
-echo &quot;net.bridge.bridge-nf-call-iptables = 1&quot; &gt;&gt; /etc/sysctl.conf
-# 执行命令以应用
-sysctl -p
-
-# 卸载旧版本
-sudo yum remove -y kubelet kubeadm kubectl
-sudo yum install -y kubelet kubeadm kubectl
-
-# 重启 docker，并启动 kubelet
-systemctl daemon-reload
-systemctl restart docker
-systemctl enable kubelet &amp;&amp; systemctl start kubelet
-</code></pre>
 ]]></content>
     </entry>
 </feed>
