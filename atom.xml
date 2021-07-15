@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://www.ztianzeng.com</id>
     <title>天增的博客</title>
-    <updated>2021-07-15T01:44:33.703Z</updated>
+    <updated>2021-07-15T01:49:06.765Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://www.ztianzeng.com"/>
     <link rel="self" href="https://www.ztianzeng.com/atom.xml"/>
@@ -16,8 +16,7 @@
         <link href="https://www.ztianzeng.com/post/jenkins-rong-qi-an-zhuang-python3-huan-jing/">
         </link>
         <updated>2021-07-13T11:42:24.000Z</updated>
-        <content type="html"><![CDATA[<p>https://www.cnblogs.com/yoyoketang/p/12116246.html</p>
-<p>在docker环境中安装jenkins，jenkins的构建环境是docker中的环境，默认的docker中默认只有python2而没有python3，因此需要再docker中手动装python3</p>
+        <content type="html"><![CDATA[<p>在docker环境中安装jenkins，jenkins的构建环境是docker中的环境，默认的docker中默认只有python2而没有python3，因此需要再docker中手动装python3</p>
 <h1 id="进入jenkins容器">进入jenkins容器</h1>
 <p>docker exec -it -u root 容器id /bin/bash</p>
 <h1 id="容器内部安装python3">容器内部安装python3</h1>
