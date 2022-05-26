@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkblog_gatsby=self.webpackChunkblog_gatsby||[]).push([[159],{31325:function(e,l,t){t.r(l);var a=t(67294),n=t(73865),u=t(1597);l.default=function(e){var l=e.data.allSiYuan.group;return a.createElement(n.Z,{title:"All Tags"},a.createElement("h1",null,"所有标签"),a.createElement("ul",null,l.map((function(e){return a.createElement("li",{key:e.fieldValue},a.createElement(u.Link,{to:"/tags/"+e.fieldValue+"/"},e.fieldValue," (",e.totalCount,")"))}))))}}}]);
+//# sourceMappingURL=component---src-pages-tags-js-eb46013c1fa4d9eafcb1.js.map
