@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-article-list-page-template-tsx",
     "path": "/posts/2",
-    "result": {"pageContext":{"limit":5,"skip":5,"pageCount":9,"pageIndex":1,"ids":["/posts/K8S更换证书","/posts/并发请求去重","/posts/Gatsby4.0升级","/posts/Log Structured Merge Tree LSM原理","/posts/从CPU亲缘性探究Thread.currentThread"]}},
+    "result": {"pageContext":{"limit":5,"skip":5,"pageCount":9,"pageIndex":1,"ids":["/posts/准备迎接SpringBoot3.0","/posts/K8S更换证书","/posts/并发请求去重","/posts/Gatsby4.0升级","/posts/Log Structured Merge Tree LSM原理"]}},
     "staticQueryHashes": ["630634786","928362550"]}
