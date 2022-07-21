@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-article-list-page-template-tsx",
     "path": "/posts/5",
-    "result": {"pageContext":{"limit":5,"skip":20,"pageCount":9,"pageIndex":4,"ids":["/posts/稀缺读后感","/posts/使用yt-dlp下载youyube视频并转换成MP3","/posts/七牛云自定义处理图片","/posts/苹果 macOS 12 Monterey 升级","/posts/Maven包管理"]}},
+    "result": {"pageContext":{"limit":5,"skip":20,"pageCount":9,"pageIndex":4,"ids":["/posts/兜兜转转，最后用Gastby重写了我的博客","/posts/稀缺读后感","/posts/使用yt-dlp下载youyube视频并转换成MP3","/posts/七牛云自定义处理图片","/posts/苹果 macOS 12 Monterey 升级"]}},
     "staticQueryHashes": ["630634786","928362550"]}
