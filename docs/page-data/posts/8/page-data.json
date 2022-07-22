@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-article-list-page-template-tsx",
     "path": "/posts/8",
-    "result": {"pageContext":{"limit":5,"skip":35,"pageCount":9,"pageIndex":7,"ids":["/posts/spring24","/posts/K8S从入门到放弃 —— 安装Ingress","/posts/K8S入门到放弃 —— 初始化节点","/posts/K8S入门到放弃 —— 前置环境准备","/posts/Jenkins容器安装python3环境"]}},
+    "result": {"pageContext":{"limit":5,"skip":35,"pageCount":9,"pageIndex":7,"ids":["/posts/在Spring2.4中使用NacosConfig","/posts/spring24","/posts/K8S从入门到放弃 —— 安装Ingress","/posts/K8S入门到放弃 —— 初始化节点","/posts/K8S入门到放弃 —— 前置环境准备"]}},
     "staticQueryHashes": ["630634786","928362550"]}
