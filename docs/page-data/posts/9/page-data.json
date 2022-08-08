@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-article-list-page-template-tsx",
     "path": "/posts/9",
-    "result": {"pageContext":{"limit":5,"skip":40,"pageCount":9,"pageIndex":8,"ids":["/posts/Jenkins容器安装python3环境","/posts/记:多线程中调用feign失败","/posts/Fig介绍","/posts/记录一次NAS系统崩溃","/posts/2021年XBOX最新解锁的方法"]}},
+    "result": {"pageContext":{"limit":5,"skip":40,"pageCount":10,"pageIndex":8,"ids":["/posts/K8S入门到放弃 —— 前置环境准备","/posts/Jenkins容器安装python3环境","/posts/记:多线程中调用feign失败","/posts/Fig介绍","/posts/记录一次NAS系统崩溃"]}},
     "staticQueryHashes": ["630634786","928362550"]}

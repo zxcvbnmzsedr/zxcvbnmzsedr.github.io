@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-article-list-page-template-tsx",
     "path": "/posts/2",
-    "result": {"pageContext":{"limit":5,"skip":5,"pageCount":9,"pageIndex":1,"ids":["/posts/Nginx泛解析反向代理多个服务","/posts/用ffmpeg从webm提取mp3","/posts/Cloudflare让IPV6不在鸡肋","/posts/准备迎接SpringBoot3.0","/posts/K8S更换证书"]}},
+    "result": {"pageContext":{"limit":5,"skip":5,"pageCount":10,"pageIndex":1,"ids":["/posts/Squid运行调试命令及日志状态分析","/posts/Nginx泛解析反向代理多个服务","/posts/用ffmpeg从webm提取mp3","/posts/Cloudflare让IPV6不在鸡肋","/posts/准备迎接SpringBoot3.0"]}},
     "staticQueryHashes": ["630634786","928362550"]}
