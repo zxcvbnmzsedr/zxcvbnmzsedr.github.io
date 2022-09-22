@@ -4,10 +4,17 @@
         <description><![CDATA[一期一会，世当珍惜]]></description>
         <link>https://www.ztianzeng.com</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 21 Sep 2022 08:28:20 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 22 Sep 2022 09:55:10 GMT</lastBuildDate>
         <atom:link href="https://www.ztianzeng.com/rss.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[ztianzeng 2022]]></copyright>
         <language><![CDATA[zh-CN]]></language>
+        <item>
+            <title><![CDATA[Java自动重启原因]]></title>
+            <link>https://www.ztianzeng.com/posts/Java%E8%87%AA%E5%8A%A8%E9%87%8D%E5%90%AF%E5%8E%9F%E5%9B%A0/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/Java%E8%87%AA%E5%8A%A8%E9%87%8D%E5%90%AF%E5%8E%9F%E5%9B%A0/</guid>
+            <pubDate>Thu, 22 Sep 2022 09:11:00 GMT</pubDate>
+            <content:encoded/>
+        </item>
         <item>
             <title><![CDATA[工作流引擎]]></title>
             <link>https://www.ztianzeng.com/posts/%E5%B7%A5%E4%BD%9C%E6%B5%81%E5%BC%95%E6%93%8E/</link>
@@ -317,16 +324,16 @@
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[使用yt-dlp下载youyube视频并转换成MP3]]></title>
-            <link>https://www.ztianzeng.com/posts/%E4%BD%BF%E7%94%A8yt-dlp%E4%B8%8B%E8%BD%BDyouyube%E8%A7%86%E9%A2%91%E5%B9%B6%E8%BD%AC%E6%8D%A2%E6%88%90MP3/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E4%BD%BF%E7%94%A8yt-dlp%E4%B8%8B%E8%BD%BDyouyube%E8%A7%86%E9%A2%91%E5%B9%B6%E8%BD%AC%E6%8D%A2%E6%88%90MP3/</guid>
+            <title><![CDATA[使用Centos7构建安卓apk包]]></title>
+            <link>https://www.ztianzeng.com/posts/%E4%BD%BF%E7%94%A8Centos7%E6%9E%84%E5%BB%BA%E5%AE%89%E5%8D%93apk%E5%8C%85/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E4%BD%BF%E7%94%A8Centos7%E6%9E%84%E5%BB%BA%E5%AE%89%E5%8D%93apk%E5%8C%85/</guid>
             <pubDate>Thu, 21 Apr 2022 07:48:00 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[使用Centos7构建安卓apk包]]></title>
-            <link>https://www.ztianzeng.com/posts/%E4%BD%BF%E7%94%A8Centos7%E6%9E%84%E5%BB%BA%E5%AE%89%E5%8D%93apk%E5%8C%85/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E4%BD%BF%E7%94%A8Centos7%E6%9E%84%E5%BB%BA%E5%AE%89%E5%8D%93apk%E5%8C%85/</guid>
+            <title><![CDATA[使用yt-dlp下载youyube视频并转换成MP3]]></title>
+            <link>https://www.ztianzeng.com/posts/%E4%BD%BF%E7%94%A8yt-dlp%E4%B8%8B%E8%BD%BDyouyube%E8%A7%86%E9%A2%91%E5%B9%B6%E8%BD%AC%E6%8D%A2%E6%88%90MP3/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E4%BD%BF%E7%94%A8yt-dlp%E4%B8%8B%E8%BD%BDyouyube%E8%A7%86%E9%A2%91%E5%B9%B6%E8%BD%AC%E6%8D%A2%E6%88%90MP3/</guid>
             <pubDate>Thu, 21 Apr 2022 07:48:00 GMT</pubDate>
             <content:encoded/>
         </item>
@@ -359,9 +366,9 @@
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[记:多线程中调用feign失败]]></title>
-            <link>https://www.ztianzeng.com/posts/%E8%AE%B0:%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%AD%E8%B0%83%E7%94%A8feign%E5%A4%B1%E8%B4%A5/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%AE%B0:%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%AD%E8%B0%83%E7%94%A8feign%E5%A4%B1%E8%B4%A5/</guid>
+            <title><![CDATA[Openwrt搭建免流服务器]]></title>
+            <link>https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Openwrt%E6%90%AD%E5%BB%BA%E5%85%8D%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Openwrt%E6%90%AD%E5%BB%BA%E5%85%8D%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
             <pubDate>Thu, 21 Apr 2022 07:48:00 GMT</pubDate>
             <content:encoded/>
         </item>
@@ -373,9 +380,9 @@
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[Openwrt搭建免流服务器]]></title>
-            <link>https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Openwrt%E6%90%AD%E5%BB%BA%E5%85%8D%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Openwrt%E6%90%AD%E5%BB%BA%E5%85%8D%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+            <title><![CDATA[记:多线程中调用feign失败]]></title>
+            <link>https://www.ztianzeng.com/posts/%E8%AE%B0:%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%AD%E8%B0%83%E7%94%A8feign%E5%A4%B1%E8%B4%A5/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%AE%B0:%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%AD%E8%B0%83%E7%94%A8feign%E5%A4%B1%E8%B4%A5/</guid>
             <pubDate>Thu, 21 Apr 2022 07:48:00 GMT</pubDate>
             <content:encoded/>
         </item>
