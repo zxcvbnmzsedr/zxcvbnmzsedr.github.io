@@ -4,10 +4,24 @@
         <description><![CDATA[一期一会，世当珍惜]]></description>
         <link>https://www.ztianzeng.com</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Fri, 04 Nov 2022 01:26:42 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 06 Feb 2023 10:02:30 GMT</lastBuildDate>
         <atom:link href="https://www.ztianzeng.com/rss.xml" rel="self" type="application/rss+xml"/>
-        <copyright><![CDATA[ztianzeng 2022]]></copyright>
+        <copyright><![CDATA[ztianzeng 2023]]></copyright>
         <language><![CDATA[zh-CN]]></language>
+        <item>
+            <title><![CDATA[Gradle Java和Groovy混编]]></title>
+            <link>https://www.ztianzeng.com/posts/Gradle%20Java%E5%92%8CGroovy%E6%B7%B7%E7%BC%96/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/Gradle%20Java%E5%92%8CGroovy%E6%B7%B7%E7%BC%96/</guid>
+            <pubDate>Mon, 06 Feb 2023 07:22:00 GMT</pubDate>
+            <content:encoded/>
+        </item>
+        <item>
+            <title><![CDATA[springboot配置HttpMessageConverter]]></title>
+            <link>https://www.ztianzeng.com/posts/springboot%E9%85%8D%E7%BD%AEHttpMessageConverter/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/springboot%E9%85%8D%E7%BD%AEHttpMessageConverter/</guid>
+            <pubDate>Mon, 30 Jan 2023 05:43:00 GMT</pubDate>
+            <content:encoded/>
+        </item>
         <item>
             <title><![CDATA[InnoDB存储引擎之内存管理]]></title>
             <link>https://www.ztianzeng.com/posts/InnoDB%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E4%B9%8B%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86/</link>
