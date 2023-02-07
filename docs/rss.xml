@@ -4,10 +4,17 @@
         <description><![CDATA[一期一会，世当珍惜]]></description>
         <link>https://www.ztianzeng.com</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 06 Feb 2023 10:02:30 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 07 Feb 2023 07:26:55 GMT</lastBuildDate>
         <atom:link href="https://www.ztianzeng.com/rss.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[ztianzeng 2023]]></copyright>
         <language><![CDATA[zh-CN]]></language>
+        <item>
+            <title><![CDATA[Jackson序列化继承Map类型的字段]]></title>
+            <link>https://www.ztianzeng.com/posts/Jackson%E5%BA%8F%E5%88%97%E5%8C%96%E7%BB%A7%E6%89%BFMap%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%AD%97%E6%AE%B5/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/Jackson%E5%BA%8F%E5%88%97%E5%8C%96%E7%BB%A7%E6%89%BFMap%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%AD%97%E6%AE%B5/</guid>
+            <pubDate>Tue, 07 Feb 2023 07:16:00 GMT</pubDate>
+            <content:encoded/>
+        </item>
         <item>
             <title><![CDATA[Gradle Java和Groovy混编]]></title>
             <link>https://www.ztianzeng.com/posts/Gradle%20Java%E5%92%8CGroovy%E6%B7%B7%E7%BC%96/</link>
