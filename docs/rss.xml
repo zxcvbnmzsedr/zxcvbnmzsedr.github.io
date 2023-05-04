@@ -4,10 +4,17 @@
         <description><![CDATA[一期一会，世当珍惜]]></description>
         <link>https://www.ztianzeng.com</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Thu, 04 May 2023 03:53:21 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 04 May 2023 05:07:33 GMT</lastBuildDate>
         <atom:link href="https://www.ztianzeng.com/rss.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[ztianzeng 2023]]></copyright>
         <language><![CDATA[zh-CN]]></language>
+        <item>
+            <title><![CDATA[解决Mac安装软件的已损坏，无法打开]]></title>
+            <link>https://www.ztianzeng.com/posts/%E8%A7%A3%E5%86%B3Mac%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%B7%B2%E6%8D%9F%E5%9D%8F%EF%BC%8C%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%A7%A3%E5%86%B3Mac%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%B7%B2%E6%8D%9F%E5%9D%8F%EF%BC%8C%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80/</guid>
+            <pubDate>Thu, 04 May 2023 05:03:00 GMT</pubDate>
+            <content:encoded/>
+        </item>
         <item>
             <title><![CDATA[《孤帆远航》游戏体验]]></title>
             <link>https://www.ztianzeng.com/posts/%E3%80%8A%E5%AD%A4%E5%B8%86%E8%BF%9C%E8%88%AA%E3%80%8B%E6%B8%B8%E6%88%8F%E4%BD%93%E9%AA%8C/</link>
@@ -247,16 +254,16 @@
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[RocketMQ事务消息实现原理]]></title>
-            <link>https://www.ztianzeng.com/posts/RocketMQ/RocketMQ%E4%BA%8B%E5%8A%A1%E6%B6%88%E6%81%AF%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/RocketMQ/RocketMQ%E4%BA%8B%E5%8A%A1%E6%B6%88%E6%81%AF%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/</guid>
+            <title><![CDATA[RocketMQ]]></title>
+            <link>https://www.ztianzeng.com/posts/RocketMQ/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/RocketMQ/</guid>
             <pubDate>Thu, 05 May 2022 12:27:00 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[RocketMQ]]></title>
-            <link>https://www.ztianzeng.com/posts/RocketMQ/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/RocketMQ/</guid>
+            <title><![CDATA[RocketMQ事务消息实现原理]]></title>
+            <link>https://www.ztianzeng.com/posts/RocketMQ/RocketMQ%E4%BA%8B%E5%8A%A1%E6%B6%88%E6%81%AF%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/RocketMQ/RocketMQ%E4%BA%8B%E5%8A%A1%E6%B6%88%E6%81%AF%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86/</guid>
             <pubDate>Thu, 05 May 2022 12:27:00 GMT</pubDate>
             <content:encoded/>
         </item>
@@ -303,9 +310,9 @@
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[Jenkins容器安装python3环境]]></title>
-            <link>https://www.ztianzeng.com/posts/Jenkins%E5%AE%B9%E5%99%A8%E5%AE%89%E8%A3%85python3%E7%8E%AF%E5%A2%83/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/Jenkins%E5%AE%B9%E5%99%A8%E5%AE%89%E8%A3%85python3%E7%8E%AF%E5%A2%83/</guid>
+            <title><![CDATA[Fig介绍]]></title>
+            <link>https://www.ztianzeng.com/posts/Fig%E4%BB%8B%E7%BB%8D/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/Fig%E4%BB%8B%E7%BB%8D/</guid>
             <pubDate>Thu, 21 Apr 2022 07:48:00 GMT</pubDate>
             <content:encoded/>
         </item>
@@ -317,9 +324,9 @@
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[Fig介绍]]></title>
-            <link>https://www.ztianzeng.com/posts/Fig%E4%BB%8B%E7%BB%8D/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/Fig%E4%BB%8B%E7%BB%8D/</guid>
+            <title><![CDATA[Jenkins容器安装python3环境]]></title>
+            <link>https://www.ztianzeng.com/posts/Jenkins%E5%AE%B9%E5%99%A8%E5%AE%89%E8%A3%85python3%E7%8E%AF%E5%A2%83/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/Jenkins%E5%AE%B9%E5%99%A8%E5%AE%89%E8%A3%85python3%E7%8E%AF%E5%A2%83/</guid>
             <pubDate>Thu, 21 Apr 2022 07:48:00 GMT</pubDate>
             <content:encoded/>
         </item>
@@ -338,13 +345,6 @@
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[Maven包管理]]></title>
-            <link>https://www.ztianzeng.com/posts/Maven%E5%8C%85%E7%AE%A1%E7%90%86/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/Maven%E5%8C%85%E7%AE%A1%E7%90%86/</guid>
-            <pubDate>Thu, 21 Apr 2022 07:48:00 GMT</pubDate>
-            <content:encoded/>
-        </item>
-        <item>
             <title><![CDATA[Mac使用Fuse挂载NTFS]]></title>
             <link>https://www.ztianzeng.com/posts/Mac%E4%BD%BF%E7%94%A8Fuse%E6%8C%82%E8%BD%BDNTFS/</link>
             <guid isPermaLink="true">https://www.ztianzeng.com/posts/Mac%E4%BD%BF%E7%94%A8Fuse%E6%8C%82%E8%BD%BDNTFS/</guid>
@@ -355,6 +355,13 @@
             <title><![CDATA[posts]]></title>
             <link>https://www.ztianzeng.com/posts/</link>
             <guid isPermaLink="true">https://www.ztianzeng.com/posts/</guid>
+            <pubDate>Thu, 21 Apr 2022 07:48:00 GMT</pubDate>
+            <content:encoded/>
+        </item>
+        <item>
+            <title><![CDATA[Maven包管理]]></title>
+            <link>https://www.ztianzeng.com/posts/Maven%E5%8C%85%E7%AE%A1%E7%90%86/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/Maven%E5%8C%85%E7%AE%A1%E7%90%86/</guid>
             <pubDate>Thu, 21 Apr 2022 07:48:00 GMT</pubDate>
             <content:encoded/>
         </item>
@@ -373,16 +380,16 @@
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[使用Centos7构建安卓apk包]]></title>
-            <link>https://www.ztianzeng.com/posts/%E4%BD%BF%E7%94%A8Centos7%E6%9E%84%E5%BB%BA%E5%AE%89%E5%8D%93apk%E5%8C%85/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E4%BD%BF%E7%94%A8Centos7%E6%9E%84%E5%BB%BA%E5%AE%89%E5%8D%93apk%E5%8C%85/</guid>
+            <title><![CDATA[七牛云自定义处理图片]]></title>
+            <link>https://www.ztianzeng.com/posts/%E4%B8%83%E7%89%9B%E4%BA%91%E8%87%AA%E5%AE%9A%E4%B9%89%E5%A4%84%E7%90%86%E5%9B%BE%E7%89%87/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E4%B8%83%E7%89%9B%E4%BA%91%E8%87%AA%E5%AE%9A%E4%B9%89%E5%A4%84%E7%90%86%E5%9B%BE%E7%89%87/</guid>
             <pubDate>Thu, 21 Apr 2022 07:48:00 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[七牛云自定义处理图片]]></title>
-            <link>https://www.ztianzeng.com/posts/%E4%B8%83%E7%89%9B%E4%BA%91%E8%87%AA%E5%AE%9A%E4%B9%89%E5%A4%84%E7%90%86%E5%9B%BE%E7%89%87/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E4%B8%83%E7%89%9B%E4%BA%91%E8%87%AA%E5%AE%9A%E4%B9%89%E5%A4%84%E7%90%86%E5%9B%BE%E7%89%87/</guid>
+            <title><![CDATA[使用Centos7构建安卓apk包]]></title>
+            <link>https://www.ztianzeng.com/posts/%E4%BD%BF%E7%94%A8Centos7%E6%9E%84%E5%BB%BA%E5%AE%89%E5%8D%93apk%E5%8C%85/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E4%BD%BF%E7%94%A8Centos7%E6%9E%84%E5%BB%BA%E5%AE%89%E5%8D%93apk%E5%8C%85/</guid>
             <pubDate>Thu, 21 Apr 2022 07:48:00 GMT</pubDate>
             <content:encoded/>
         </item>
@@ -394,16 +401,16 @@
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[私有云笔记调研]]></title>
-            <link>https://www.ztianzeng.com/posts/%E7%A7%81%E6%9C%89%E4%BA%91%E7%AC%94%E8%AE%B0%E8%B0%83%E7%A0%94/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E7%A7%81%E6%9C%89%E4%BA%91%E7%AC%94%E8%AE%B0%E8%B0%83%E7%A0%94/</guid>
+            <title><![CDATA[2021年XBOX最新解锁的方法]]></title>
+            <link>https://www.ztianzeng.com/posts/%E6%B8%B8%E6%88%8F/2021%E5%B9%B4XBOX%E6%9C%80%E6%96%B0%E8%A7%A3%E9%94%81%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E6%B8%B8%E6%88%8F/2021%E5%B9%B4XBOX%E6%9C%80%E6%96%B0%E8%A7%A3%E9%94%81%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
             <pubDate>Thu, 21 Apr 2022 07:48:00 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[2021年XBOX最新解锁的方法]]></title>
-            <link>https://www.ztianzeng.com/posts/%E6%B8%B8%E6%88%8F/2021%E5%B9%B4XBOX%E6%9C%80%E6%96%B0%E8%A7%A3%E9%94%81%E7%9A%84%E6%96%B9%E6%B3%95/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E6%B8%B8%E6%88%8F/2021%E5%B9%B4XBOX%E6%9C%80%E6%96%B0%E8%A7%A3%E9%94%81%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+            <title><![CDATA[私有云笔记调研]]></title>
+            <link>https://www.ztianzeng.com/posts/%E7%A7%81%E6%9C%89%E4%BA%91%E7%AC%94%E8%AE%B0%E8%B0%83%E7%A0%94/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E7%A7%81%E6%9C%89%E4%BA%91%E7%AC%94%E8%AE%B0%E8%B0%83%E7%A0%94/</guid>
             <pubDate>Thu, 21 Apr 2022 07:48:00 GMT</pubDate>
             <content:encoded/>
         </item>
@@ -418,13 +425,6 @@
             <title><![CDATA[苹果 macOS 12 Monterey 升级]]></title>
             <link>https://www.ztianzeng.com/posts/%E8%8B%B9%E6%9E%9C%20macOS%2012%20Monterey%20%E5%8D%87%E7%BA%A7/</link>
             <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%8B%B9%E6%9E%9C%20macOS%2012%20Monterey%20%E5%8D%87%E7%BA%A7/</guid>
-            <pubDate>Thu, 21 Apr 2022 07:48:00 GMT</pubDate>
-            <content:encoded/>
-        </item>
-        <item>
-            <title><![CDATA[Openwrt搭建免流服务器]]></title>
-            <link>https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Openwrt%E6%90%AD%E5%BB%BA%E5%85%8D%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Openwrt%E6%90%AD%E5%BB%BA%E5%85%8D%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
             <pubDate>Thu, 21 Apr 2022 07:48:00 GMT</pubDate>
             <content:encoded/>
         </item>
@@ -450,6 +450,13 @@
             <content:encoded/>
         </item>
         <item>
+            <title><![CDATA[Openwrt搭建免流服务器]]></title>
+            <link>https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Openwrt%E6%90%AD%E5%BB%BA%E5%85%8D%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Openwrt%E6%90%AD%E5%BB%BA%E5%85%8D%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+            <pubDate>Thu, 21 Apr 2022 07:48:00 GMT</pubDate>
+            <content:encoded/>
+        </item>
+        <item>
             <title><![CDATA[在上Alpine Linux安装Adguard Home]]></title>
             <link>https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/%E5%9C%A8%E4%B8%8AAlpine%20Linux%E5%AE%89%E8%A3%85Adguard%20Home/</link>
             <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/%E5%9C%A8%E4%B8%8AAlpine%20Linux%E5%AE%89%E8%A3%85Adguard%20Home/</guid>
@@ -457,16 +464,16 @@
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[定时备份数据]]></title>
-            <link>https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E6%95%B0%E6%8D%AE/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E6%95%B0%E6%8D%AE/</guid>
+            <title><![CDATA[记录一次NAS系统崩溃]]></title>
+            <link>https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1NAS%E7%B3%BB%E7%BB%9F%E5%B4%A9%E6%BA%83/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1NAS%E7%B3%BB%E7%BB%9F%E5%B4%A9%E6%BA%83/</guid>
             <pubDate>Thu, 21 Apr 2022 07:48:00 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[记录一次NAS系统崩溃]]></title>
-            <link>https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1NAS%E7%B3%BB%E7%BB%9F%E5%B4%A9%E6%BA%83/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1NAS%E7%B3%BB%E7%BB%9F%E5%B4%A9%E6%BA%83/</guid>
+            <title><![CDATA[定时备份数据]]></title>
+            <link>https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E6%95%B0%E6%8D%AE/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E6%95%B0%E6%8D%AE/</guid>
             <pubDate>Thu, 21 Apr 2022 07:48:00 GMT</pubDate>
             <content:encoded/>
         </item>
