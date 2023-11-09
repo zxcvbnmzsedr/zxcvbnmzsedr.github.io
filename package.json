@@ -1,0 +1,32 @@
+{
+  "name": "ztianzeng.com",
+  "description": "ztianzeng personal website",
+  "version": "1.0.0",
+  "private": true,
+  "author": "ztianzeng <i@ztianzeng.com>",
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "scripts": {
+    "start": "yarn docs:dev",
+    "build": "yarn docs:build",
+    "docs:dev": "vuepress dev ./docs",
+    "docs:build": "vuepress build --no-cache --dest ./dist ./docs ",
+    "deploy": "yarn build && echo 'www.ztianzeng.com' > ./dist/CNAME && gh-pages -d dist -t true -b master -e docs -r  git@github.com:zxcvbnmzsedr/zxcvbnmzsedr.github.io.git"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.10",
+    "gh-pages": "^5.0.0",
+    "isomorphic-fetch": "^3.0.0",
+    "vuepress": "^1.9.7",
+    "vuepress-plugin-baidu-tongji-analytics": "^1.0.2"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-blog": "^1.9.4",
+    "cheerio": "^1.0.0-rc.12",
+    "vuepress-plugin-rss-feed": "^1.0.1",
+    "vuepress-theme-vdoing": "^1.12.7"
+  }
+}
