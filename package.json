@@ -11,7 +11,7 @@
   "main": "n/a",
   "scripts": {
     "start": "yarn docs:dev",
-    "build": "yarn docs:build && echo 'www.ztianzeng.com' > ./dist/CNAME",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && yarn docs:build && echo 'www.ztianzeng.com' > ./dist/CNAME",
     "docs:dev": "vuepress  dev ./docs",
     "docs:build": "vuepress build --no-cache --dest ./dist ./docs ",
     "deploy": "yarn build && echo 'www.ztianzeng.com' > ./dist/CNAME && gh-pages -d dist -t true -b master -e docs -r  git@github.com:zxcvbnmzsedr/zxcvbnmzsedr.github.io.git"
