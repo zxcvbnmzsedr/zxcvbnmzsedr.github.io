@@ -1,10 +1,15 @@
 ---
 title: PGSQL临时关闭主键约束
-short_title: ''
+short_title: 
 date: 2023-11-21 01:29:14
 article: true
 timeline: false
 isOriginal: true
+permalink: /pages/85f92c/
+categories: 
+  - post
+tags: 
+  - 
 ---
 
 
