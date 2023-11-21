@@ -1,15 +1,10 @@
 ---
 title: PGSQL临时关闭主键约束
-short_title: 
+short_title: ''
 date: 2023-11-21 01:29:14
 article: true
 timeline: false
 isOriginal: true
-permalink: /pages/85f92c/
-categories: 
-  - post
-tags: 
-  - 
 ---
 
 
@@ -53,5 +48,3 @@ SET session_replication_role TO origin;
 ```
 
 总体而言，通过合理使用 `session_replication_role`​ 参数，我们可以在需要时灵活地控制数据库行为，临时关闭主键约束是其中之一。然而，务必小心使用这样的设置，以避免对数据库完整性造成不可逆的影响。
-
-<pre><div class="bg-black rounded-md"><div class="flex items-center relative text-gray-200 bg-gray-800 gizmo:dark:bg-token-surface-primary px-4 py-2 text-xs font-sans justify-between rounded-t-md"><br class="Apple-interchange-newline"/></div></div></pre>
