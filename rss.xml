@@ -4,14 +4,14 @@
         <description><![CDATA[一期一会，世当珍惜]]></description>
         <link>https://www.ztianzeng.com</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 22 Nov 2023 05:53:39 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 22 Nov 2023 07:35:47 GMT</lastBuildDate>
         <atom:link href="https://www.ztianzeng.com/rss.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[ztianzeng 2023]]></copyright>
         <language><![CDATA[zh-CN]]></language>
         <item>
             <title><![CDATA[虚拟机开机时出现Press ESC in 5 seconds to skip startup.nsh, any other key to continue问题的解决办法]]></title>
-            <link>https://www.ztianzeng.com/pages/475585/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/pages/475585/</guid>
+            <link>https://www.ztianzeng.com/pages/bdd5d5/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/pages/bdd5d5/</guid>
             <pubDate>Wed, 22 Nov 2023 01:07:56 GMT</pubDate>
             <content:encoded/>
         </item>
@@ -457,16 +457,16 @@
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[私有云笔记调研]]></title>
-            <link>https://www.ztianzeng.com/posts/%E7%A7%81%E6%9C%89%E4%BA%91%E7%AC%94%E8%AE%B0%E8%B0%83%E7%A0%94/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E7%A7%81%E6%9C%89%E4%BA%91%E7%AC%94%E8%AE%B0%E8%B0%83%E7%A0%94/</guid>
+            <title><![CDATA[稀缺读后感]]></title>
+            <link>https://www.ztianzeng.com/posts/%E7%A8%80%E7%BC%BA%E8%AF%BB%E5%90%8E%E6%84%9F/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E7%A8%80%E7%BC%BA%E8%AF%BB%E5%90%8E%E6%84%9F/</guid>
             <pubDate>Thu, 21 Apr 2022 15:48:00 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[稀缺读后感]]></title>
-            <link>https://www.ztianzeng.com/posts/%E7%A8%80%E7%BC%BA%E8%AF%BB%E5%90%8E%E6%84%9F/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E7%A8%80%E7%BC%BA%E8%AF%BB%E5%90%8E%E6%84%9F/</guid>
+            <title><![CDATA[私有云笔记调研]]></title>
+            <link>https://www.ztianzeng.com/posts/%E7%A7%81%E6%9C%89%E4%BA%91%E7%AC%94%E8%AE%B0%E8%B0%83%E7%A0%94/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E7%A7%81%E6%9C%89%E4%BA%91%E7%AC%94%E8%AE%B0%E8%B0%83%E7%A0%94/</guid>
             <pubDate>Thu, 21 Apr 2022 15:48:00 GMT</pubDate>
             <content:encoded/>
         </item>
@@ -485,16 +485,16 @@
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[Linux WinOMV5 安装WebDAV服务]]></title>
-            <link>https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Linux%20WinOMV5%20%E5%AE%89%E8%A3%85WebDAV%E6%9C%8D%E5%8A%A1/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Linux%20WinOMV5%20%E5%AE%89%E8%A3%85WebDAV%E6%9C%8D%E5%8A%A1/</guid>
+            <title><![CDATA[Openwrt搭建免流服务器]]></title>
+            <link>https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Openwrt%E6%90%AD%E5%BB%BA%E5%85%8D%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Openwrt%E6%90%AD%E5%BB%BA%E5%85%8D%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
             <pubDate>Thu, 21 Apr 2022 15:48:00 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[Openwrt搭建免流服务器]]></title>
-            <link>https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Openwrt%E6%90%AD%E5%BB%BA%E5%85%8D%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Openwrt%E6%90%AD%E5%BB%BA%E5%85%8D%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+            <title><![CDATA[Linux WinOMV5 安装WebDAV服务]]></title>
+            <link>https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Linux%20WinOMV5%20%E5%AE%89%E8%A3%85WebDAV%E6%9C%8D%E5%8A%A1/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Linux%20WinOMV5%20%E5%AE%89%E8%A3%85WebDAV%E6%9C%8D%E5%8A%A1/</guid>
             <pubDate>Thu, 21 Apr 2022 15:48:00 GMT</pubDate>
             <content:encoded/>
         </item>
