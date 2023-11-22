@@ -16,6 +16,18 @@ module.exports = {
   theme: 'vdoing',
   title: '天增的博客',
   description: '一期一会，世当珍惜',
+  locales: {
+    '/': {
+      lang: 'zh-CN',
+      title: '天增的博客',
+      description: '一期一会，世当珍惜'
+    },
+    '/en/': {
+      lang: 'en-US',
+      title: 'tianzeng blog',
+      description: 'One encounter, one opportunity; cherish the world. '
+    }
+  },
   plugins: [
     [
       'rss-feed',

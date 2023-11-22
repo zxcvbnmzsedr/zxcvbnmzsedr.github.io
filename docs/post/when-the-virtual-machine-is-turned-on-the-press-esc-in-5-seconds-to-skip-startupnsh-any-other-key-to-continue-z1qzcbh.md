@@ -1,12 +1,15 @@
 ---
-title: >-
-  虚拟机开机时出现Press ESC in 5 seconds to skip startup.nsh, any other key to
-  continue问题的解决办法
-short_title: ''
+title: 虚拟机开机时出现Press ESC in 5 seconds to skip startup.nsh, any other key to continue问题的解决办法
+short_title: 
 date: 2023-11-22 01:07:56
 article: true
 timeline: false
 isOriginal: true
+permalink: /pages/475585/
+categories: 
+  - post
+tags: 
+  - 
 ---
 
 
