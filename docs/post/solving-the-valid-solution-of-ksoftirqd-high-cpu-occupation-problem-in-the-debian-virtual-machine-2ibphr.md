@@ -19,7 +19,7 @@ isOriginal: true
 
 ## 问题背景
 
-爱快内置Debian虚拟机在半虚拟化网卡模式下，某些情况下可能触发ksoftirqd CPU占用100%的问题。通过初步分析，我们怀疑这一问题可能源于未正确安装virtio驱动。
+爱快内置Debian虚拟机在半虚拟化网卡模式下，某些情况下可能触发ksoftirqd CPU占用100%的问题。通过初步分析，有理由怀疑这一问题可能源于[未安装virtio驱动](https://wiki.debian.org/DebianKVMGuests)。
 
 ## 解决方案步骤
 
