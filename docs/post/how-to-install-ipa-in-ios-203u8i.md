@@ -17,11 +17,11 @@ isOriginal: true
 
 爱思助手提供了方便的签名工具：
 
-​![image](https://raw.githubusercontent.com/zxcvbnmzsedr/zxcvbnmzsedr.github.io/vuepress/uPic202402191508571.png)​​​
+​![image](https://raw.githubusercontent.com/zxcvbnmzsedr/zxcvbnmzsedr.github.io/vuepress/uPic/202402191513713.png)​​​
 
 选择IPA文件添加进去
 
-​![image](https://raw.githubusercontent.com/zxcvbnmzsedr/zxcvbnmzsedr.github.io/vuepress/uPic202402191508968.png)​
+​![image](https://raw.githubusercontent.com/zxcvbnmzsedr/zxcvbnmzsedr.github.io/vuepress/uPic/202402191513602.png)​
 
 为了不7天就安装一次，所以需要手动导入证书，（这个证书需要开通个人或者企业开发者）
 
