@@ -4,56 +4,56 @@
         <description><![CDATA[一期一会，世当珍惜]]></description>
         <link>https://www.ztianzeng.com</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 19 Feb 2024 06:45:32 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 19 Feb 2024 06:46:48 GMT</lastBuildDate>
         <atom:link href="https://www.ztianzeng.com/rss.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[ztianzeng 2024]]></copyright>
         <language><![CDATA[zh-CN]]></language>
         <item>
             <title><![CDATA[IOS安装IPA的方法]]></title>
-            <link>https://www.ztianzeng.com/pages/15125a/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/pages/15125a/</guid>
+            <link>https://www.ztianzeng.com/pages/5f119e/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/pages/5f119e/</guid>
             <pubDate>Mon, 19 Feb 2024 05:04:30 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
             <title><![CDATA[解决爱快安装Debian虚拟机中ksoftirqd高CPU占用问题的有效方案]]></title>
-            <link>https://www.ztianzeng.com/pages/f9109b/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/pages/f9109b/</guid>
+            <link>https://www.ztianzeng.com/pages/946248/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/pages/946248/</guid>
             <pubDate>Tue, 26 Dec 2023 07:43:57 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
             <title><![CDATA[Python开发GUI]]></title>
-            <link>https://www.ztianzeng.com/pages/49b6a8/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/pages/49b6a8/</guid>
+            <link>https://www.ztianzeng.com/pages/838724/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/pages/838724/</guid>
             <pubDate>Mon, 18 Dec 2023 07:49:18 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
             <title><![CDATA[处理Jackson反序列化问题：Cannot deserialize instance of java.lang.Integer out of VALUE_FALSE]]></title>
-            <link>https://www.ztianzeng.com/pages/a3db50/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/pages/a3db50/</guid>
+            <link>https://www.ztianzeng.com/pages/3e8275/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/pages/3e8275/</guid>
             <pubDate>Tue, 28 Nov 2023 05:25:54 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
             <title><![CDATA[Jackson单字母驼峰命名问题]]></title>
-            <link>https://www.ztianzeng.com/pages/7f0c4e/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/pages/7f0c4e/</guid>
+            <link>https://www.ztianzeng.com/pages/dfeb6f/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/pages/dfeb6f/</guid>
             <pubDate>Thu, 23 Nov 2023 12:27:34 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
             <title><![CDATA[Solution for the \Press ESC in 5 seconds to skip startup.nsh, any other key to continue\ Issue on Virtual Machine Boot in UEFI Mode]]></title>
-            <link>https://www.ztianzeng.com/pages/266031/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/pages/266031/</guid>
+            <link>https://www.ztianzeng.com/pages/5d19c4/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/pages/5d19c4/</guid>
             <pubDate>Wed, 22 Nov 2023 01:28:09 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
             <title><![CDATA[虚拟机开机时出现Press ESC in 5 seconds to skip startup.nsh, any other key to continue问题的解决办法]]></title>
-            <link>https://www.ztianzeng.com/pages/eee148/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/pages/eee148/</guid>
+            <link>https://www.ztianzeng.com/pages/e63e41/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/pages/e63e41/</guid>
             <pubDate>Wed, 22 Nov 2023 01:07:56 GMT</pubDate>
             <content:encoded/>
         </item>
@@ -520,16 +520,16 @@
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[Linux WinOMV5 安装WebDAV服务]]></title>
-            <link>https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Linux%20WinOMV5%20%E5%AE%89%E8%A3%85WebDAV%E6%9C%8D%E5%8A%A1/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Linux%20WinOMV5%20%E5%AE%89%E8%A3%85WebDAV%E6%9C%8D%E5%8A%A1/</guid>
+            <title><![CDATA[记:多线程中调用feign失败]]></title>
+            <link>https://www.ztianzeng.com/posts/%E8%AE%B0:%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%AD%E8%B0%83%E7%94%A8feign%E5%A4%B1%E8%B4%A5/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%AE%B0:%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%AD%E8%B0%83%E7%94%A8feign%E5%A4%B1%E8%B4%A5/</guid>
             <pubDate>Thu, 21 Apr 2022 15:48:00 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[记:多线程中调用feign失败]]></title>
-            <link>https://www.ztianzeng.com/posts/%E8%AE%B0:%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%AD%E8%B0%83%E7%94%A8feign%E5%A4%B1%E8%B4%A5/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%AE%B0:%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%AD%E8%B0%83%E7%94%A8feign%E5%A4%B1%E8%B4%A5/</guid>
+            <title><![CDATA[Linux WinOMV5 安装WebDAV服务]]></title>
+            <link>https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Linux%20WinOMV5%20%E5%AE%89%E8%A3%85WebDAV%E6%9C%8D%E5%8A%A1/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Linux%20WinOMV5%20%E5%AE%89%E8%A3%85WebDAV%E6%9C%8D%E5%8A%A1/</guid>
             <pubDate>Thu, 21 Apr 2022 15:48:00 GMT</pubDate>
             <content:encoded/>
         </item>
@@ -555,16 +555,16 @@
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[记录一次NAS系统崩溃]]></title>
-            <link>https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1NAS%E7%B3%BB%E7%BB%9F%E5%B4%A9%E6%BA%83/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1NAS%E7%B3%BB%E7%BB%9F%E5%B4%A9%E6%BA%83/</guid>
+            <title><![CDATA[定时备份数据]]></title>
+            <link>https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E6%95%B0%E6%8D%AE/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E6%95%B0%E6%8D%AE/</guid>
             <pubDate>Thu, 21 Apr 2022 15:48:00 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[定时备份数据]]></title>
-            <link>https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E6%95%B0%E6%8D%AE/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD%E6%95%B0%E6%8D%AE/</guid>
+            <title><![CDATA[记录一次NAS系统崩溃]]></title>
+            <link>https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1NAS%E7%B3%BB%E7%BB%9F%E5%B4%A9%E6%BA%83/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1NAS%E7%B3%BB%E7%BB%9F%E5%B4%A9%E6%BA%83/</guid>
             <pubDate>Thu, 21 Apr 2022 15:48:00 GMT</pubDate>
             <content:encoded/>
         </item>
