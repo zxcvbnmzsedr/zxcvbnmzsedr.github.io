@@ -17,11 +17,11 @@ isOriginal: true
 
 爱思助手提供了方便的签名工具：
 
-​![image](assets/image-20240219135828-5r1kza2.png)​​​
+​![image](http://127.0.0.1:6806/assets/image-20240219135828-5r1kza2.png)​​​
 
 选择IPA文件添加进去
 
-​![image](assets/image-20240219135942-9imi1jm.png)​
+​![image](http://127.0.0.1:6806/assets/image-20240219135942-9imi1jm.png)​
 
 为了不7天就安装一次，所以需要手动导入证书，（这个证书需要开通个人或者企业开发者）
 
@@ -37,7 +37,7 @@ isOriginal: true
 
 ‍
 
-​![image](assets/image-20240219141023-7zqkjr3.png)​
+​![image](http://127.0.0.1:6806/assets/image-20240219141023-7zqkjr3.png)​
 
 全选进去进行签名。
 
