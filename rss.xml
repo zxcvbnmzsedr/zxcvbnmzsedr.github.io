@@ -4,56 +4,56 @@
         <description><![CDATA[一期一会，世当珍惜]]></description>
         <link>https://www.ztianzeng.com</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 19 Feb 2024 07:08:48 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 19 Feb 2024 07:10:24 GMT</lastBuildDate>
         <atom:link href="https://www.ztianzeng.com/rss.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[ztianzeng 2024]]></copyright>
         <language><![CDATA[zh-CN]]></language>
         <item>
             <title><![CDATA[IOS安装IPA的方法]]></title>
-            <link>https://www.ztianzeng.com/pages/8996e2/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/pages/8996e2/</guid>
+            <link>https://www.ztianzeng.com/pages/c9a358/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/pages/c9a358/</guid>
             <pubDate>Mon, 19 Feb 2024 05:04:30 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
             <title><![CDATA[解决爱快安装Debian虚拟机中ksoftirqd高CPU占用问题的有效方案]]></title>
-            <link>https://www.ztianzeng.com/pages/af4824/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/pages/af4824/</guid>
+            <link>https://www.ztianzeng.com/pages/4f02a4/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/pages/4f02a4/</guid>
             <pubDate>Tue, 26 Dec 2023 07:43:57 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
             <title><![CDATA[Python开发GUI]]></title>
-            <link>https://www.ztianzeng.com/pages/7f0d56/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/pages/7f0d56/</guid>
+            <link>https://www.ztianzeng.com/pages/7ec3f1/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/pages/7ec3f1/</guid>
             <pubDate>Mon, 18 Dec 2023 07:49:18 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
             <title><![CDATA[处理Jackson反序列化问题：Cannot deserialize instance of java.lang.Integer out of VALUE_FALSE]]></title>
-            <link>https://www.ztianzeng.com/pages/0e2ec1/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/pages/0e2ec1/</guid>
+            <link>https://www.ztianzeng.com/pages/1b1c85/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/pages/1b1c85/</guid>
             <pubDate>Tue, 28 Nov 2023 05:25:54 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
             <title><![CDATA[Jackson单字母驼峰命名问题]]></title>
-            <link>https://www.ztianzeng.com/pages/dead9d/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/pages/dead9d/</guid>
+            <link>https://www.ztianzeng.com/pages/a737cb/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/pages/a737cb/</guid>
             <pubDate>Thu, 23 Nov 2023 12:27:34 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
             <title><![CDATA[Solution for the \Press ESC in 5 seconds to skip startup.nsh, any other key to continue\ Issue on Virtual Machine Boot in UEFI Mode]]></title>
-            <link>https://www.ztianzeng.com/pages/cdd595/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/pages/cdd595/</guid>
+            <link>https://www.ztianzeng.com/pages/61247e/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/pages/61247e/</guid>
             <pubDate>Wed, 22 Nov 2023 01:28:09 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
             <title><![CDATA[虚拟机开机时出现Press ESC in 5 seconds to skip startup.nsh, any other key to continue问题的解决办法]]></title>
-            <link>https://www.ztianzeng.com/pages/b2bbfd/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/pages/b2bbfd/</guid>
+            <link>https://www.ztianzeng.com/pages/51eea8/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/pages/51eea8/</guid>
             <pubDate>Wed, 22 Nov 2023 01:07:56 GMT</pubDate>
             <content:encoded/>
         </item>
@@ -415,13 +415,6 @@
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[K8S从入门到放弃 —— 安装Ingress]]></title>
-            <link>https://www.ztianzeng.com/posts/K8S/K8S%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83%20%E2%80%94%E2%80%94%20%E5%AE%89%E8%A3%85Ingress/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/K8S/K8S%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83%20%E2%80%94%E2%80%94%20%E5%AE%89%E8%A3%85Ingress/</guid>
-            <pubDate>Thu, 21 Apr 2022 15:48:00 GMT</pubDate>
-            <content:encoded/>
-        </item>
-        <item>
             <title><![CDATA[Jenkins容器安装python3环境]]></title>
             <link>https://www.ztianzeng.com/posts/Jenkins%E5%AE%B9%E5%99%A8%E5%AE%89%E8%A3%85python3%E7%8E%AF%E5%A2%83/</link>
             <guid isPermaLink="true">https://www.ztianzeng.com/posts/Jenkins%E5%AE%B9%E5%99%A8%E5%AE%89%E8%A3%85python3%E7%8E%AF%E5%A2%83/</guid>
@@ -432,6 +425,13 @@
             <title><![CDATA[K8S入门到放弃 —— 初始化节点]]></title>
             <link>https://www.ztianzeng.com/posts/K8S/K8S%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83%20%E2%80%94%E2%80%94%20%E5%88%9D%E5%A7%8B%E5%8C%96%E8%8A%82%E7%82%B9/</link>
             <guid isPermaLink="true">https://www.ztianzeng.com/posts/K8S/K8S%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83%20%E2%80%94%E2%80%94%20%E5%88%9D%E5%A7%8B%E5%8C%96%E8%8A%82%E7%82%B9/</guid>
+            <pubDate>Thu, 21 Apr 2022 15:48:00 GMT</pubDate>
+            <content:encoded/>
+        </item>
+        <item>
+            <title><![CDATA[K8S从入门到放弃 —— 安装Ingress]]></title>
+            <link>https://www.ztianzeng.com/posts/K8S/K8S%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83%20%E2%80%94%E2%80%94%20%E5%AE%89%E8%A3%85Ingress/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/K8S/K8S%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E6%94%BE%E5%BC%83%20%E2%80%94%E2%80%94%20%E5%AE%89%E8%A3%85Ingress/</guid>
             <pubDate>Thu, 21 Apr 2022 15:48:00 GMT</pubDate>
             <content:encoded/>
         </item>
