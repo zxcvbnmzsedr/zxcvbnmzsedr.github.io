@@ -4,63 +4,70 @@
         <description><![CDATA[一期一会，世当珍惜]]></description>
         <link>https://www.ztianzeng.com</link>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Mon, 19 Feb 2024 07:16:22 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 19 Mar 2024 09:34:55 GMT</lastBuildDate>
         <atom:link href="https://www.ztianzeng.com/rss.xml" rel="self" type="application/rss+xml"/>
         <copyright><![CDATA[ztianzeng 2024]]></copyright>
         <language><![CDATA[zh-CN]]></language>
         <item>
+            <title><![CDATA[elegraph上传图片Image dimensions invalid]]></title>
+            <link>https://www.ztianzeng.com/pages/60adb0/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/pages/60adb0/</guid>
+            <pubDate>Tue, 19 Mar 2024 09:24:50 GMT</pubDate>
+            <content:encoded/>
+        </item>
+        <item>
             <title><![CDATA[arm64 版 picgo 提示已损坏解决办法]]></title>
-            <link>https://www.ztianzeng.com/pages/d96d43/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/pages/d96d43/</guid>
+            <link>https://www.ztianzeng.com/pages/d715b0/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/pages/d715b0/</guid>
             <pubDate>Mon, 19 Feb 2024 07:13:53 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
             <title><![CDATA[IOS安装IPA的方法]]></title>
-            <link>https://www.ztianzeng.com/pages/8fb1e8/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/pages/8fb1e8/</guid>
+            <link>https://www.ztianzeng.com/pages/a4dacf/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/pages/a4dacf/</guid>
             <pubDate>Mon, 19 Feb 2024 05:04:30 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
             <title><![CDATA[解决爱快安装Debian虚拟机中ksoftirqd高CPU占用问题的有效方案]]></title>
-            <link>https://www.ztianzeng.com/pages/cd135a/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/pages/cd135a/</guid>
+            <link>https://www.ztianzeng.com/pages/e4aa62/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/pages/e4aa62/</guid>
             <pubDate>Tue, 26 Dec 2023 07:43:57 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
             <title><![CDATA[Python开发GUI]]></title>
-            <link>https://www.ztianzeng.com/pages/8071b4/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/pages/8071b4/</guid>
+            <link>https://www.ztianzeng.com/pages/9571e4/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/pages/9571e4/</guid>
             <pubDate>Mon, 18 Dec 2023 07:49:18 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
             <title><![CDATA[处理Jackson反序列化问题：Cannot deserialize instance of java.lang.Integer out of VALUE_FALSE]]></title>
-            <link>https://www.ztianzeng.com/pages/0acd29/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/pages/0acd29/</guid>
+            <link>https://www.ztianzeng.com/pages/a10ac3/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/pages/a10ac3/</guid>
             <pubDate>Tue, 28 Nov 2023 05:25:54 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
             <title><![CDATA[Jackson单字母驼峰命名问题]]></title>
-            <link>https://www.ztianzeng.com/pages/77c9ff/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/pages/77c9ff/</guid>
+            <link>https://www.ztianzeng.com/pages/572b8d/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/pages/572b8d/</guid>
             <pubDate>Thu, 23 Nov 2023 12:27:34 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
             <title><![CDATA[Solution for the \Press ESC in 5 seconds to skip startup.nsh, any other key to continue\ Issue on Virtual Machine Boot in UEFI Mode]]></title>
-            <link>https://www.ztianzeng.com/pages/ef354e/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/pages/ef354e/</guid>
+            <link>https://www.ztianzeng.com/pages/9f6867/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/pages/9f6867/</guid>
             <pubDate>Wed, 22 Nov 2023 01:28:09 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
             <title><![CDATA[虚拟机开机时出现Press ESC in 5 seconds to skip startup.nsh, any other key to continue问题的解决办法]]></title>
-            <link>https://www.ztianzeng.com/pages/4e9aa3/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/pages/4e9aa3/</guid>
+            <link>https://www.ztianzeng.com/pages/2ea256/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/pages/2ea256/</guid>
             <pubDate>Wed, 22 Nov 2023 01:07:56 GMT</pubDate>
             <content:encoded/>
         </item>
@@ -492,13 +499,6 @@
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[使用Centos7构建安卓apk包]]></title>
-            <link>https://www.ztianzeng.com/posts/%E4%BD%BF%E7%94%A8Centos7%E6%9E%84%E5%BB%BA%E5%AE%89%E5%8D%93apk%E5%8C%85/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E4%BD%BF%E7%94%A8Centos7%E6%9E%84%E5%BB%BA%E5%AE%89%E5%8D%93apk%E5%8C%85/</guid>
-            <pubDate>Thu, 21 Apr 2022 15:48:00 GMT</pubDate>
-            <content:encoded/>
-        </item>
-        <item>
             <title><![CDATA[使用yt-dlp下载youyube视频并转换成MP3]]></title>
             <link>https://www.ztianzeng.com/posts/%E4%BD%BF%E7%94%A8yt-dlp%E4%B8%8B%E8%BD%BDyouyube%E8%A7%86%E9%A2%91%E5%B9%B6%E8%BD%AC%E6%8D%A2%E6%88%90MP3/</link>
             <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E4%BD%BF%E7%94%A8yt-dlp%E4%B8%8B%E8%BD%BDyouyube%E8%A7%86%E9%A2%91%E5%B9%B6%E8%BD%AC%E6%8D%A2%E6%88%90MP3/</guid>
@@ -506,9 +506,9 @@
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[私有云笔记调研]]></title>
-            <link>https://www.ztianzeng.com/posts/%E7%A7%81%E6%9C%89%E4%BA%91%E7%AC%94%E8%AE%B0%E8%B0%83%E7%A0%94/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E7%A7%81%E6%9C%89%E4%BA%91%E7%AC%94%E8%AE%B0%E8%B0%83%E7%A0%94/</guid>
+            <title><![CDATA[使用Centos7构建安卓apk包]]></title>
+            <link>https://www.ztianzeng.com/posts/%E4%BD%BF%E7%94%A8Centos7%E6%9E%84%E5%BB%BA%E5%AE%89%E5%8D%93apk%E5%8C%85/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E4%BD%BF%E7%94%A8Centos7%E6%9E%84%E5%BB%BA%E5%AE%89%E5%8D%93apk%E5%8C%85/</guid>
             <pubDate>Thu, 21 Apr 2022 15:48:00 GMT</pubDate>
             <content:encoded/>
         </item>
@@ -516,6 +516,13 @@
             <title><![CDATA[稀缺读后感]]></title>
             <link>https://www.ztianzeng.com/posts/%E7%A8%80%E7%BC%BA%E8%AF%BB%E5%90%8E%E6%84%9F/</link>
             <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E7%A8%80%E7%BC%BA%E8%AF%BB%E5%90%8E%E6%84%9F/</guid>
+            <pubDate>Thu, 21 Apr 2022 15:48:00 GMT</pubDate>
+            <content:encoded/>
+        </item>
+        <item>
+            <title><![CDATA[私有云笔记调研]]></title>
+            <link>https://www.ztianzeng.com/posts/%E7%A7%81%E6%9C%89%E4%BA%91%E7%AC%94%E8%AE%B0%E8%B0%83%E7%A0%94/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E7%A7%81%E6%9C%89%E4%BA%91%E7%AC%94%E8%AE%B0%E8%B0%83%E7%A0%94/</guid>
             <pubDate>Thu, 21 Apr 2022 15:48:00 GMT</pubDate>
             <content:encoded/>
         </item>
@@ -534,16 +541,16 @@
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[Openwrt搭建免流服务器]]></title>
-            <link>https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Openwrt%E6%90%AD%E5%BB%BA%E5%85%8D%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Openwrt%E6%90%AD%E5%BB%BA%E5%85%8D%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+            <title><![CDATA[Linux WinOMV5 安装WebDAV服务]]></title>
+            <link>https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Linux%20WinOMV5%20%E5%AE%89%E8%A3%85WebDAV%E6%9C%8D%E5%8A%A1/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Linux%20WinOMV5%20%E5%AE%89%E8%A3%85WebDAV%E6%9C%8D%E5%8A%A1/</guid>
             <pubDate>Thu, 21 Apr 2022 15:48:00 GMT</pubDate>
             <content:encoded/>
         </item>
         <item>
-            <title><![CDATA[Linux WinOMV5 安装WebDAV服务]]></title>
-            <link>https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Linux%20WinOMV5%20%E5%AE%89%E8%A3%85WebDAV%E6%9C%8D%E5%8A%A1/</link>
-            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Linux%20WinOMV5%20%E5%AE%89%E8%A3%85WebDAV%E6%9C%8D%E5%8A%A1/</guid>
+            <title><![CDATA[Openwrt搭建免流服务器]]></title>
+            <link>https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Openwrt%E6%90%AD%E5%BB%BA%E5%85%8D%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+            <guid isPermaLink="true">https://www.ztianzeng.com/posts/%E8%BD%AF%E8%B7%AF%E7%94%B1/Openwrt%E6%90%AD%E5%BB%BA%E5%85%8D%E6%B5%81%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
             <pubDate>Thu, 21 Apr 2022 15:48:00 GMT</pubDate>
             <content:encoded/>
         </item>
