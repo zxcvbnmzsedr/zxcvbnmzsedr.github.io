@@ -1,5 +1,5 @@
 ---
-title:  elegraph上传图片Image dimensions invalid
+title: elegraph上传图片Image dimensions invalid
 short_title: ''
 date: 2024-03-19 09:24:50
 article: true
@@ -20,6 +20,7 @@ isOriginal: true
 * 图片尺寸小于10MB
 * 宽高小于400的可能会产生异常
 * 最大width 小于 5000，最大高度height 小于 4000
+* 不接受webp类型的图片，所以需要转码
 
 因为是使用python代码进行上传，所以写了一段代码将尺寸修改到合适大小，并且对图片进行压缩；
 
