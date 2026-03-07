@@ -22,11 +22,11 @@ tags:
 
 爱思助手提供了方便的签名工具：
 
-​![image](./assets/how-to-install-ipa-in-ios-203u8i/202402191513713.png)​​​
+![image](./assets/how-to-install-ipa-in-ios-203u8i/202402191513713.png)
 
 选择IPA文件添加进去
 
-​![image](./assets/how-to-install-ipa-in-ios-203u8i/202402191513602.png)​
+![image](./assets/how-to-install-ipa-in-ios-203u8i/202402191513602.png)
 
 为了不7天就安装一次，所以需要手动导入证书，（这个证书需要开通个人或者企业开发者）
 
@@ -40,12 +40,12 @@ tags:
 
 制作Profiles描述文件，将上面创建的证书，UUID设备，Bundle ID 一股脑都塞进去，最后下载出来一份mobileprovision格式的文件
 
-‍
 
-​![image](./assets/how-to-install-ipa-in-ios-203u8i/uPic202402191508672.png)​
+
+![image](./assets/how-to-install-ipa-in-ios-203u8i/uPic202402191508672.png)
 
 全选进去进行签名。
 
-‍
+
 
 签名之后的ipa文件，命名成xxx@Bundle ID.ipa ，拖动到alist进行安装，或者爱思助手进行安装，还可以airdrop推到手机进行安装

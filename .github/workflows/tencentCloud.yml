@@ -9,18 +9,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout master
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           ref: vuepress
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10.27.0
       - name: Install NodeJS
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '20.3.1'
-          cache: 'yarn'
+          cache: 'pnpm'
       - name: Install dependencies
-        run: yarn install
-      - name: Install dependencies
-        run: yarn build
+        run: pnpm install --frozen-lockfile
+      - name: Build
+        run: pnpm build
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:

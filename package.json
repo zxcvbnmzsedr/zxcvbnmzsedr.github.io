@@ -9,14 +9,16 @@
   ],
   "license": "MIT",
   "main": "n/a",
+  "packageManager": "pnpm@10.27.0",
   "scripts": {
-    "start": "yarn docs:dev",
-    "build": "export NODE_OPTIONS=--openssl-legacy-provider && yarn docs:build && echo 'www.ztianzeng.com' > ./dist/CNAME",
+    "start": "pnpm run docs:dev",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider pnpm run docs:build && echo 'www.ztianzeng.com' > ./dist/CNAME",
     "docs:dev": "vuepress  dev ./docs",
     "docs:build": "vuepress build --no-cache --dest ./dist ./docs ",
-    "deploy": "yarn build && echo 'www.ztianzeng.com' > ./dist/CNAME && gh-pages -d dist -t true -b master -e docs -r  git@github.com:zxcvbnmzsedr/zxcvbnmzsedr.github.io.git",
+    "deploy": "pnpm run build && echo 'www.ztianzeng.com' > ./dist/CNAME && gh-pages -d dist -t true -b master -e docs -r  git@github.com:zxcvbnmzsedr/zxcvbnmzsedr.github.io.git",
     "sanitize:assets": "python3 scripts/localize_blog_assets.py",
     "sanitize:test": "node --test scripts/__tests__/localize-remote-assets.test.js",
+    "check:deps": "node --test scripts/__tests__/vuepress-compiler-compat.test.js scripts/__tests__/package-manager.test.js",
     "sanitize:history": "bash scripts/history-cleanup.sh vuepress",
     "cleanup:history": "bash scripts/cleanup-history.sh"
   },
@@ -28,6 +30,7 @@
     "vuepress-plugin-baidu-tongji-analytics": "^1.0.2"
   },
   "devDependencies": {
+    "@vue/compiler-sfc": "2.7.16",
     "@vuepress/plugin-blog": "^1.9.4",
     "cheerio": "^1.0.0-rc.12",
     "vuepress-plugin-rss-feed": "^1.0.1",

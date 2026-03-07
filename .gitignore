@@ -1,19 +1,4 @@
-.env
-dist
-node_modules/
-.idea/
-.DS_Store
-
-# 本地杂项
-package-lock.json
-Notes.jar
-Tst.java
-
-# 历史素材桶与临时产物
-uPic/
-uPic*.png
-reports/
-tasks/
-tools/
-docs/plans/
-docs/en/
+/node_modules/
+/dist/
+.pnpm-store/
+.idea

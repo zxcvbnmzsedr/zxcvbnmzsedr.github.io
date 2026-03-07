@@ -7,8 +7,10 @@
 ```shell
 git clone git@github.com:zxcvbnmzsedr/blog-gatsby.git
 cd blog-gatsby
-yarn install
+pnpm install
 ```
+
+> 注意：本仓库已经完整切换到 `pnpm`，不要再与 `yarn` 混用；若本地曾用过 `yarn`，请先删除 `node_modules` 后再执行 `pnpm install`。
 
 启动思源客户端，配置config.js下的思源笔记对应的url路径和token
 
@@ -20,7 +22,7 @@ siYuan: {
 }
 ```
 
-通过`yarn start`启动项目，启动成功之后访问 localhost:8000 即可访问
+通过`pnpm start`启动项目，启动成功之后访问 localhost:8000 即可访问
 
 ![LwEJBV](./docs/.vuepress/public/readme-assets/LwEJBV.png)
 
