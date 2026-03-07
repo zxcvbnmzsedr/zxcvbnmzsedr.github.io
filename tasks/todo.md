@@ -68,7 +68,7 @@
 - [x] 核对 `peaceiris/actions-gh-pages` 的工作流输入
 - [x] 确认失败根因是仓库未配置 `HUB_TOKEN`
 - [x] 切换到 `secrets.GITHUB_TOKEN` 并补充写权限
-- [ ] 触发工作流并验证远端发布成功
+- [x] 触发工作流并验证远端发布成功
 
 ## 本次假设
 
@@ -80,3 +80,4 @@
 - `.github/workflows/tencentCloud.yml` 原先把 `peaceiris/actions-gh-pages@v3` 绑定到 `secrets.HUB_TOKEN`，但日志明确显示运行时没有找到 deploy key 或 token。
 - 已改为 `github_token: ${{ secrets.GITHUB_TOKEN }}`，并补 `permissions.contents: write`，让工作流具备向 `gh-pages` 分支推送构建产物的最小必要权限。
 - 这样可以消除对仓库额外 secret 的依赖，发布链路回到 GitHub Actions 的默认同仓库部署模型。
+- 推送修复提交 `4b2bec6` 后，CI 运行 `22796040730` 已成功完成，`Build` 与 `Deploy` 两步均通过。
