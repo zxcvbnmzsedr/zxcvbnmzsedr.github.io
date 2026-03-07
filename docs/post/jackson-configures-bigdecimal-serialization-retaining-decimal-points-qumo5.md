@@ -22,7 +22,7 @@ tags:
 
 所以，可以利用Jackson自定义序列化的方式实现动态配置。
 
-先声明自定义的`JsonSerializer`​
+先声明自定义的`JsonSerializer`
 
 ```pgsql
 public class BigDecimalDynamicSerializer extends JsonSerializer<BigDecimal>{
@@ -38,9 +38,9 @@ public class BigDecimalDynamicSerializer extends JsonSerializer<BigDecimal>{
 }
 ```
 
-在使用中直接在字段上加上，`@JsonSerialize(using = BigDecimalDynamicSerializer.class)`​
+在使用中直接在字段上加上，`@JsonSerialize(using = BigDecimalDynamicSerializer.class)`
 
-‍
+
 
 这种方式只能统一序列化成2位小数。
 
@@ -59,9 +59,9 @@ public @interface BigDecimalScale {
 
 ```
 
-类还需要继承`ContextualSerializer`​。
+类还需要继承`ContextualSerializer`。
 
-​`ContextualSerializer`​是 Jackson 提供的另一个序列化相关的接口，它的作用是通过字段已知的上下文信息定制`JsonSerializer`​，只需要实现`createContextual`​方法即可：
+`ContextualSerializer`是 Jackson 提供的另一个序列化相关的接口，它的作用是通过字段已知的上下文信息定制`JsonSerializer`，只需要实现`createContextual`方法即可：
 
 完整代码如下：
 

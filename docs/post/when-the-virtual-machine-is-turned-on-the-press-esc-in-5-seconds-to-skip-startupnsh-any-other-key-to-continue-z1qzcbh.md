@@ -29,33 +29,33 @@ Shell>_
 
 1. <span style="font-weight: bold;" data-type="strong">进入BIOS设置：</span>  在开机时，按照提示进入BIOS设置，将硬盘设为第一启动设备。
 2. <span style="font-weight: bold;" data-type="strong">手动写入启动设备：</span>  如果BIOS设置不起作用，可以按照以下步骤手动设置启动设备。在Shell命令行中执行以下操作（尖括号中的内容为注释，enter表示按下回车键）：  
-    a. 使用 `ls`​ 命令列出文件目录，然后输入 `fs0:`​ 进入目录fs0。
+    a. 使用 `ls` 命令列出文件目录，然后输入 `fs0:` 进入目录fs0。
 
     ```sql
     Shell> ls  <enter>
      Shell> fs0:  <enter>
     ```
 
-    b. 编辑文件 `startup.nsh`​。
+    b. 编辑文件 `startup.nsh`。
 
     ```sql
      FS0> edit startup.nsh  <enter>
     ```
 
-    c. 在文件中写入以下内容，例如：`\EFI\debian\grubx64.efi`​。
+    c. 在文件中写入以下内容，例如：`\EFI\debian\grubx64.efi`。
 
     ```sql
      \EFI<小写系统名，如：debian>\grubx64.efi  <enter>
     ```
 
-    d. 按下`Ctrl S`​保存文件，然后按下`Ctrl Q`​退出编辑。
+    d. 按下`Ctrl S`保存文件，然后按下`Ctrl Q`退出编辑。
 
     ```sql
     <ctrl+s 保存> <enter>
      <ctrl+q 退出编辑> <enter>
     ```
 
-    e. 输入`reset`​命令重启虚拟机。
+    e. 输入`reset`命令重启虚拟机。
 
     ```sql
      FS0> reset  <enter>

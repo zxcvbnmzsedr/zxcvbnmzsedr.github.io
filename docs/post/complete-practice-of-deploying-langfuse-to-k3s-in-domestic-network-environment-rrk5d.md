@@ -32,7 +32,7 @@ tags:
 
 ### 2.1 配置镜像加速
 
-​`/etc/rancher/k3s/registries.yaml` 中启用阿里云或 DaoCloud 镜像：
+`/etc/rancher/k3s/registries.yaml` 中启用阿里云或 DaoCloud 镜像：
 
 ```yaml
 mirrors:
@@ -67,7 +67,7 @@ curl -L -o langfuse-1.5.8.tgz \
 
 ## 3. 自定义 Values（核心）
 
-​`/root/langfuse.yml`：
+`/root/langfuse.yml`：
 
 ```yaml
 langfuse:
@@ -153,9 +153,9 @@ s3:
 
 关键点：
 
-1. 所有 Bitnami 子 Chart 覆盖 `global.imageRegistry`​，避免默认访问 `docker.io`。
-2. 统一持久卷的 `storageClass`​ 为 `langfuse`，确保 NFS 提供存储。
-3. 为 PostgreSQL `volumePermissions`​ 显式指定 `os-shell` 镜像，解决 init 容器拉取失败。
+1. 所有 Bitnami 子 Chart 覆盖 `global.imageRegistry`，避免默认访问 `docker.io`。
+2. 统一持久卷的 `storageClass` 为 `langfuse`，确保 NFS 提供存储。
+3. 为 PostgreSQL `volumePermissions` 显式指定 `os-shell` 镜像，解决 init 容器拉取失败。
 
 ## 4. 部署流程
 
@@ -219,7 +219,7 @@ crictl pull docker.m.daocloud.io/bitnamilegacy/minio:2024.12.18-debian-12-r1
 
 ## 7. 数据库初始化注意事项
 
-- 首次部署会自动创建用户 `langfuse`​ 与数据库 `postgres_langfuse`。
+- 首次部署会自动创建用户 `langfuse` 与数据库 `postgres_langfuse`。
 - 如果沿用旧数据卷（PVC 未清理），需要手动创建角色与库：
 
 ```bash
@@ -238,11 +238,11 @@ SQL
 
 |问题|表现|解决方案|
 | ------------------| --------------| ------------------------------------------|
-|Chart 下载失败|​`unexpected EOF`|通过 `ghfast.top` 或其他代理下载后上传到节点。|
-|镜像拉取超时|​`ImagePullBackOff`​ 指向 `docker.io`|在 values 中覆盖镜像仓库，提前 `crictl pull`。|
-|NFS 挂载失败|​`No such file or directory`|确认 NFS 路径存在并重启 `eip-nfs-langfuse`。|
-|PVC 长期 Pending|​`persistentvolumeclaim not found`|删除旧 PVC，必要时手工创建同名 PVC。|
-|Prisma 认证失败|​`Role "langfuse" does not exist`|手动建库建用户或清理旧数据卷重新初始化。|
+|Chart 下载失败|`unexpected EOF`|通过 `ghfast.top` 或其他代理下载后上传到节点。|
+|镜像拉取超时|`ImagePullBackOff` 指向 `docker.io`|在 values 中覆盖镜像仓库，提前 `crictl pull`。|
+|NFS 挂载失败|`No such file or directory`|确认 NFS 路径存在并重启 `eip-nfs-langfuse`。|
+|PVC 长期 Pending|`persistentvolumeclaim not found`|删除旧 PVC，必要时手工创建同名 PVC。|
+|Prisma 认证失败|`Role "langfuse" does not exist`|手动建库建用户或清理旧数据卷重新初始化。|
 
 ## 9. 验证步骤
 

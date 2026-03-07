@@ -91,9 +91,9 @@ python main.py --listen --port 8188 --auto-launch
 
 常用参数说明：
 
-- ​`--listen`：允许局域网访问。
-- ​`--port 8188`：指定端口。
-- ​`--auto-launch`：启动后自动打开浏览器。
+- `--listen`：允许局域网访问。
+- `--port 8188`：指定端口。
+- `--auto-launch`：启动后自动打开浏览器。
 
 ## 6. 推荐插件与扩展
 
@@ -120,9 +120,9 @@ git clone https://github.com/Dontdrunk/ComfyUI-DD-Translation
 
   - 确认安装的是与驱动匹配的 PyTorch CUDA 版本（如 `cu121`）。
   - 避免混装多个 CUDA 轮子；必要时重建虚拟环境并只安装一种。
-- ​`pip install -r requirements.txt` 失败：
+- `pip install -r requirements.txt` 失败：
 
-  - 先升级工具链：`python -m pip install -U pip setuptools wheel`​
+  - 先升级工具链：`python -m pip install -U pip setuptools wheel`
   - 若为网络超时，可切换镜像后重试（PyTorch 仍走官方源）。
 - Git 克隆失败（SSH）：
 

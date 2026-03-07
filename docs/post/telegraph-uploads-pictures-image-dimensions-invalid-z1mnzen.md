@@ -18,7 +18,7 @@ tags:
 
 # Telegraph上传图片Image dimensions invalid
 
-有的时候，使用API像`https://telegra.ph/upload`​上传文件的时候会抛出`Image dimensions invalid`​异常。
+有的时候，使用API像`https://telegra.ph/upload`上传文件的时候会抛出`Image dimensions invalid`异常。
 
 原因是Telegraph的图片限制：
 

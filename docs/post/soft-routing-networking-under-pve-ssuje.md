@@ -1,10 +1,15 @@
 ---
 title: PVE下的软路由组网
-short_title: ''
+short_title: 
 date: 2022-04-21 07:48:13
 article: true
 timeline: false
 isOriginal: true
+permalink: /pages/2751b8/
+categories: 
+  - post
+tags: 
+  - 
 ---
 
 
@@ -85,4 +90,4 @@ lede作为主路由，承担了拨号、科学上网的职责。
 
 PS: 光猫需要改桥接，以获得最佳性能。
 
-‍
+

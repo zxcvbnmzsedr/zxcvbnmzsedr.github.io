@@ -18,13 +18,13 @@ tags:
 
 # 处理Jackson反序列化问题：Cannot deserialize instance of java.lang.Integer out of VALUE_FALSE
 
-在使用Jackson库进行Java对象的JSON反序列化时，有时候可能会遇到错误消息："Cannot deserialize instance of `java.lang.Integer`​ out of VALUE_FALSE"。这通常是因为Jackson期望一个整数值，但实际上遇到了布尔值`false`​。
+在使用Jackson库进行Java对象的JSON反序列化时，有时候可能会遇到错误消息："Cannot deserialize instance of `java.lang.Integer` out of VALUE_FALSE"。这通常是因为Jackson期望一个整数值，但实际上遇到了布尔值`false`。
 
 ## 可能的原因和解决方案：
 
 ### 1. 类型不匹配
 
-确保你要反序列化的Java类中，与出现问题的字段对应的类型是`Integer`​（或`int`​），而不是`Boolean`​（或`boolean`​）。
+确保你要反序列化的Java类中，与出现问题的字段对应的类型是`Integer`（或`int`），而不是`Boolean`（或`boolean`）。
 
 ```sql
 public class MyData {
@@ -86,8 +86,8 @@ public class MyData {
     }
 ```
 
-以上示例假设如果遇到布尔值，将其转换为`1`​表示`true`​，`0`​表示`false`​。根据实际需求调整逻辑。
+以上示例假设如果遇到布尔值，将其转换为`1`表示`true`，`0`表示`false`。根据实际需求调整逻辑。
 
-通过采取这些措施，你应该能够解决"Cannot deserialize instance of `java.lang.Integer`​ out of VALUE_FALSE"的问题。
+通过采取这些措施，你应该能够解决"Cannot deserialize instance of `java.lang.Integer` out of VALUE_FALSE"的问题。
 
 记得在处理JSON数据时，保持Java类与JSON数据格式的一致性是至关重要的

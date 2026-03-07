@@ -35,7 +35,7 @@ cell.setCellStyle(style)
 
 # 解决
 
-只需要调用clone方法，`void cloneStyleFrom(CellStyle var1)`​将原本的cell上面的样式复制一份出来
+只需要调用clone方法，`void cloneStyleFrom(CellStyle var1)`将原本的cell上面的样式复制一份出来
 
 这样就能够起效了
 
@@ -47,4 +47,4 @@ style.setAlignment(HorizontalAlignment.CENTER)
 cell.setCellStyle(style)
 ```
 
-‍
+

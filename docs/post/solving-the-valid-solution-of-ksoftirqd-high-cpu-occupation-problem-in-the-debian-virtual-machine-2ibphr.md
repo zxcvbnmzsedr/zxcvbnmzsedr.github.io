@@ -30,7 +30,7 @@ tags:
 
 ### 1. 编辑initramfs-tools配置文件
 
-打开终端，使用以下命令编辑`/etc/initramfs-tools/modules`​文件：
+打开终端，使用以下命令编辑`/etc/initramfs-tools/modules`文件：
 
 ```pgsql
 vim /etc/initramfs-tools/modules

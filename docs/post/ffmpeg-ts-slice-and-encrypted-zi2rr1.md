@@ -70,7 +70,7 @@ Hardware acceleration methods:
 videotoolbox
 ```
 
-只需要在命令上面增加 `-hwaccel videotoolbox`​ 变成下面这样，不过这样大概率还不行，因为不一定支持视频的编解码器
+只需要在命令上面增加 `-hwaccel videotoolbox` 变成下面这样，不过这样大概率还不行，因为不一定支持视频的编解码器
 
 ```shell
 ffmpeg -y -hwaccel videotoolbox -i ./SSIS-878.mp4 \
@@ -80,7 +80,7 @@ ffmpeg -y -hwaccel videotoolbox -i ./SSIS-878.mp4 \
 
 所以继续：
 
-> ​`ffmpeg -codecs | grep "h264"`​ windows 下换成这个`ffmpeg -codecs | findstr "h264"`​
+> `ffmpeg -codecs | grep "h264"` windows 下换成这个`ffmpeg -codecs | findstr "h264"`
 
 ```shell
 ffmpeg version 7.0.1 Copyright (c) 2000-2024 the FFmpeg developers
@@ -114,4 +114,4 @@ ffmpeg -y -hwaccel videotoolbox -i ./SSIS-878.mp4 \
 -f hls -hls_time 720 -hls_list_size 0 -hls_key_info_file ./key.keyinfo -hls_playlist_type vod -hls_segment_filename ./r%d.zip ./playlist.m3u8
 ```
 
-‍
+
