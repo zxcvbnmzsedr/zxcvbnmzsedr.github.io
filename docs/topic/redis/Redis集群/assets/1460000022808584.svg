@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="240" viewBox="0 0 960 240">
+  <rect width="960" height="240" fill="#f8fafc"/>
+  <rect x="24" y="24" width="912" height="192" rx="12" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="48" y="96" font-size="28" fill="#0f172a">原图已失效，外链已下线</text>
+  <text x="48" y="144" font-size="20" fill="#334155">这是 Redis 集群文章的占位图，可后续替换为真实图片。</text>
+</svg>
