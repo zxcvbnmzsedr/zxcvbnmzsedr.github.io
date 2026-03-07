@@ -60,3 +60,23 @@
 - 迁移过程中发现 `docs/plans` 会被主题自动收录到首页文章流，已通过给计划文档补 `article: false` 消除副作用。
 - 已执行干净迁移验证：`pnpm install --no-frozen-lockfile`、`pnpm run check:deps`、`pnpm build` 全部成功。
 - 已执行浏览器验收：首页 `http://127.0.0.1:4173/` 正常，文章页 `http://127.0.0.1:4173/pages/d4b7af/` 正常，三张正文图片加载尺寸分别为 `2000x1440`、`1870x1286`、`820x536`。
+
+---
+
+# 2026-03-07 GitHub Pages 发布认证修复
+
+- [x] 核对 `peaceiris/actions-gh-pages` 的工作流输入
+- [x] 确认失败根因是仓库未配置 `HUB_TOKEN`
+- [x] 切换到 `secrets.GITHUB_TOKEN` 并补充写权限
+- [ ] 触发工作流并验证远端发布成功
+
+## 本次假设
+
+- 当前失败不是构建问题，而是发布步骤缺少可用认证凭据。
+- 对同仓库发布 `gh-pages` 分支，优先使用 GitHub 默认下发的 `GITHUB_TOKEN`，避免再额外维护个人令牌。
+
+## Review
+
+- `.github/workflows/tencentCloud.yml` 原先把 `peaceiris/actions-gh-pages@v3` 绑定到 `secrets.HUB_TOKEN`，但日志明确显示运行时没有找到 deploy key 或 token。
+- 已改为 `github_token: ${{ secrets.GITHUB_TOKEN }}`，并补 `permissions.contents: write`，让工作流具备向 `gh-pages` 分支推送构建产物的最小必要权限。
+- 这样可以消除对仓库额外 secret 的依赖，发布链路回到 GitHub Actions 的默认同仓库部署模型。
